@@ -11,3 +11,12 @@ function mergeSort(l1, l2) {
 }
 
 console.log(mergeSort(l1, l2));
+
+
+// 2
+let l1 = [1, 3, 5, 7];
+let l2 = [0, 2, 4];
+
+const mergeSort = (l1, l2) => [...l1, ...l2].sort();
+
+console.log(mergeSort(l1, l2));
