@@ -1,0 +1,15 @@
+	# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+
+# ignore temp files
+tempCodeRunnerFile
+tempCodeRunnerFile.cpp
+tempCodeRunnerFile.javascript
+
+.vscode
