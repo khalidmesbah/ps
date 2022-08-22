@@ -39,39 +39,44 @@
 // }
 
 /* 2 */
-class Stack{
+class Stack {
     #elements;
     #size;
-    constructor(){
+    constructor() {
         this.#elements = {};
         this.#size = 0;
     }
-    push(element){
+    push(element) {
         this.#elements[this.#size++] = element;
         return this;
     }
-    pop(){
+    pop() {
         if (this.isEmpty) return null;
-        const element = this.#elements[this.#size--];
+        const element = this.#elements[--this.#size];
         delete this.#elements[this.#size];
         return element;
     }
-    peek(){
-        if(this.isEmpty) return null;
-        return this.#elements[this.#size - 1]
+    peek() {
+        if (this.isEmpty) return null;
+        return this.#elements[this.#size - 1];
     }
-    get size(){
-        return this.#size
+    get size() {
+        return this.#size;
     }
-    get isEmpty(){
+    get isEmpty() {
         return this.#size === 0;
+    }
+    get storage() {
+        return Object.values(this.#elements);
     }
 }
 
 let stack = new Stack();
-stack.push('a').push('b').push('c');
-console.log(stack.peek())
-stack.pop();
-stack.pop();
-console.log(stack.peek())
-console.log(stack.size)
+stack.push('a').push('b').push('c').push('d');
+console.log(stack.pop());
+console.log(stack.storage);
+// stack.pop();
+// stack.pop();
+// console.log(stack.peek())
+// console.log(stack.size)
+console.log(`top and jerry`)
