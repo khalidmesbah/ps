@@ -79,4 +79,3 @@ console.log(stack.storage);
 // stack.pop();
 // console.log(stack.peek())
 // console.log(stack.size)
-console.log(`top and jerry`)

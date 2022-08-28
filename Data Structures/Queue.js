@@ -63,8 +63,7 @@ class Queue {
         return this.#elements[this.#tail - 1];
     }
     print() {
-        for (const element in this.#elements)
-            console.log(this.#elements[element]);
+        console.log(Object.values(this.#elements));
     }
     get size() {
         return this.#tail - this.#head;
@@ -85,13 +84,10 @@ class Queue {
 }
 
 let q = new Queue();
-console.log(q.size);
-console.log(q.isEmpty);
-q.enqueue('a').enqueue('b').enqueue('c');
-q.enqueue('j');
-console.log(q.storage);
-q.dequeue()
-q.dequeue()
-console.log(q.storage);
-console.log(q.size);
-console.log(q.peek());
+q.enqueue('a');
+q.enqueue('b');
+q.enqueue('c');
+q.print();
+q.dequeue();
+q.print();
+console.log(q.peek())
