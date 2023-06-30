@@ -56,6 +56,8 @@ map4.set(1, 'One');
 map4.set(1, 'Two');
 console.log(map4);
 
+/* accessing elements */
+
 
 /* Getting and Deleting Items from a Map */
 // map4.clear(); // empty the map
