@@ -12,7 +12,40 @@ a data structure can be defined as any of the following:-
 - an implementation of an Abstract data type
 - an ADT implementation that is defined as a "class of objects whose logical behavior is defined by a set of values and a set of operations"
 
+### Types of data structures in terms of the structure
 
+#### Linear
+ - every element has at most two elements
+  - a successor
+  - a predecessor
+ - every element may have
+  - both a successor and a predecessor
+  - a successor only
+  - a predecessor only
+  - neither successor nor predecessor
+
+#### Non-linear 
+- every element may have
+  - successors and predecessors
+  - successors only
+  - predecessors only
+  - neither successors nor predecessors
+
+### Types of data structures in terms of the ability to shrink and extend
+
+#### Static
+> allocate at compile time
+>
+
+- fast at reading/accessing
+- slow at deleting and inserting
+
+#### Dynamic
+> allocate at run time
+>
+
+- fast at deleting and inserting
+- slow at reading/accessing
 
 ### Examples of data structures
 
