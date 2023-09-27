@@ -6,14 +6,14 @@
 - think of solutions using a pen and a paper
 - choose the best solution
 - try to solve the question
-- if you did not know the solution after 30m stop
+- couldn't figure out the solution after **_30m_**, Stop It, Get Some Help.
 - search for tips and look at tags
 - another 15m to try
-- didn't know! watch the solution
+- didn't know! Watch the solution
 
 ## Template for solving
 
-- 
+-
 
 ## Notes
 

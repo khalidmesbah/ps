@@ -12,3 +12,4 @@
   - verify the solution
   - ask yourself, is there a more efficient way
   - think of the problem from a different angle
+- don't move on from a problem until you understand it and it's solution
