@@ -7,3 +7,5 @@
 5. write the solution
 6. rubber duck
 7. run through test cases to prove your code works
+
+- communicate your thought process

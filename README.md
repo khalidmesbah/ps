@@ -1,5 +1,7 @@
 # DSA (Data Structures and Algorithms)
 
+> DSA (Data Structures and Algorithms) is the leading cause of DSA (Depression, Stress and Anxiety).
+
 ## Algorithms
 
 This section contains implementations of useful algorithms that can be leveraged to solve various computational problems efficiently.
