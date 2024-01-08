@@ -1,0 +1,761 @@
+\documentclass{exam}
+\usepackage{tasks}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[fontsize=12pt]{scrextend}
+\geometry{
+  a4paper,
+  total={7.3in, 10.5in},
+  left=0.5in,
+  top=0.5in,
+  includefoot,
+}
+\settasks{
+  label-width=11.0971pt,
+}
+
+
+\lfoot{Khalid Gaber Mesbah}
+\cfoot{\thepage}
+\rfoot{Numerical Analysis}
+
+\begin{document}
+
+\begin{titlepage}
+	\Large
+	\begin{center}
+		\vspace*{5cm}
+
+		\textbf{Numerical Analysis Homework}
+
+		\vspace{0.5cm}
+		By
+
+		\vspace{1cm}
+
+		\textbf{Khalid Gaber Mesbah}
+
+		\vfill
+
+		A homework dedicated to\\
+		\vspace{0.5cm}
+		Doctor of Mathematics\\
+		\vspace{0.5cm}
+		\textbf{Dr. El-sayed El-sanousy}
+
+		\vfill
+
+		\vspace{0.8cm}
+
+		Mathematics Department\\
+		Sohag University\\
+		Egypt\\
+		\today
+
+	\end{center}
+\end{titlepage}
+
+\begin{questions}
+	\section{The Errors.}
+
+	\question Most numerical calculations are inexact because of $\dots$ .
+	\begin{tasks}(1)
+		\task Inaccuracies in given data
+		\task Inaccuracies introduced in the subsequent analysis of the given data
+		\task Both a and b
+		\task Neither a nor b
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question Which of the following statements is false?
+	\begin{tasks}(1)
+		\task An exact number may be regarded as an approximate number with error zero
+		\task An approximate number $x_0$ is a number that differs but slightly from an exact number $x$ and it is used in place of the later in calculations
+		\task If $x_0$ is an approximate value of the number $x$, we write $x_0 \approx x$
+		\task By the error $\epsilon$ of an approximate number $x_0$ we ordinarily mean the difference between the exact number $x$ and the given approximate number, that is $\epsilon = x_0 + x$
+	\end{tasks}
+	Answer: \textbf{d}, By the error $\epsilon$ of an approximate number $x_0$ we ordinarily mean the difference between the exact number $x$ and the given approximate number, that is $\epsilon = x - x_0$
+
+	\question What is the absolute error of the approximate number $x_0$?
+	\begin{tasks}(2)
+		\task $E_{abs} = |\epsilon|$
+		\task $E_{abs} = |x - x_0|$
+		\task Both a and b
+		\task Neither a nor b
+	\end{tasks}
+	Answer: \textbf{c}, $\epsilon = x - x_0$
+
+	\question Which of the following statements is false?
+	\begin{tasks}(1)
+		\task The absolute error $E_{abs}$ of an approximate number $x_0$ is the absolute value of the difference between the corresponding exact number $x$ and the approximate number $x_0$
+		\task The absolute error suffices to describe the accuracy of a measurement or a computation
+		\task An essential point in the accuracy of measurements is the absolute error related to the unit length
+		\task An essential point in the accuracy of measurements is the relative error
+	\end{tasks}
+	Answer: \textbf{b}, relative error: the absolute error related to the unit length, The absolute error does not suffice to describe the accuracy of a measurement or a computation
+
+	\question Which of the following statements is false?
+	\begin{tasks}(1)
+		\task $E_r = \frac{E_{abs}}{|x|}, x \ne 0$
+		\task The relative error $E_r$ of an approximate number $x_0$ is the ratio of the absolute error $E_{abs}$ of the number to the modulus (absolute value) of the corresponding exact number $x$ $(x \ne 0)$
+		\task $E_r = \frac{E_{abs}}{|x|}$, $x$ can be 0
+		\task The relative error is the absolute error related to the unit length
+	\end{tasks}
+	Answer: \textbf{c}, $x$ must not be $0$
+
+	\question Errors that influence numerical results can be $\dots$ .
+	\begin{tasks}(2)
+		\task Difficult to influence
+		\task Reduced
+		\task Eliminated
+		\task All of the previous
+	\end{tasks}
+	Answer: \textbf{d}
+
+	\question Which of the following not a basic source of errors?
+	\begin{tasks}(1)
+		\task Errors in given input data
+		\task Round-off errors during the computations
+		\task Truncation error
+		\task Simplifications in the mathematical model
+		\task Human errors
+		\task Machine errors
+		\task Lollipop errros
+	\end{tasks}
+	Answer: \textbf{g}
+
+	\question Round-off errors occur whenever $\dots$ .
+	\begin{tasks}(1)
+		\task An irrational number is shortened to a fixed number of decimals
+		\task An irrational number is rounded off to a fixed number of decimals
+		\task A decimal fraction is converted to the form used in computer
+		\task All of the previous
+	\end{tasks}
+	Answer: \textbf{d}
+
+	\question Truncation errors occur whenever $\dots$ .
+	\begin{tasks}(1)
+		\task A limited process is truncated(broken off) before one has come to the limiting value
+		\task An infinite series is broken off after a finite number of terms
+		\task A derivative is approximated with a difference quotient
+		\task A nonlinear function is approximated with a linear function
+		\task All the previous
+	\end{tasks}
+	Answer: \textbf{e}
+
+	\question Discretization error occur whenever $\dots$ .
+	\begin{tasks}(1)
+		\task A limited process is truncated(broken off) before one has come to the limiting value
+		\task An infinite series is broken off after a finite number of terms
+		\task A derivative is approximated with a difference quotient
+		\task A nonlinear function is approximated with a linear function
+		\task All the previous
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question Which of the following is not considered a significant digit of a number in its decimal representation?
+	\begin{tasks}(1)
+		\task Any nonzero digit
+		\task Any zero lying between significant digits
+		\task Any zero used as a placeholder, to indicate a retained place
+		\task Any zero that serve only to fix the position of the decimal point
+	\end{tasks}
+	Answer: \textbf{d}
+
+	\question How many significant digits in the this number 0.002080
+	\begin{tasks}(2)
+		\task 2
+		\task 4
+		\task 6
+		\task 7
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question Which of the following statements is false?
+	\begin{tasks}(1)
+		\task The absolute error of an algebraic sum of several approximate numbers does not exceed the sum of the absolute errors of the numbers
+		\task The absolute error of an algebraic difference of several approximate numbers does not exceed the sum of the absolute errors of the numbers
+		\task The relative error of a product of several approximate nonzero numbers does not exceed the sum of the relative errors of the numbers
+		\task The relative error of a quotient exceeds the sum of the relative errors of the divided and divisor
+	\end{tasks}
+	Answer: \textbf{d}, The relative error of a quotient does not exceed the sum of the relative errors of the divided and divisor
+
+	\section{Difference operators and their simplest properties points}
+
+	\question Given a function $f(x)$ defined for discrete values of $x$, which statement is true about the function?
+	\begin{tasks}(1)
+		\task The function is continuous
+		\task The function is differentiable
+		\task The function has distinct and separate values for each $x$
+		\task The function is defined for all real numbers
+	\end{tasks}
+	Answer: \textbf{c}, A discrete function has distinct and separate values for each $x$.
+
+	\question Which of the following is not one of the operators in numerical analysis?
+	\begin{tasks}(2)
+		\task The forward difference operator
+		\task The backward difference operator
+		\task The central difference operator
+		\task The average operator
+		\task The distance(shift) operator
+		\task The differentiable operator
+		\task The lollipop operator
+	\end{tasks}
+	Answer: \textbf{g}
+
+	\question What is the general formula of the forward difference operator $\Delta$?
+	\begin{tasks}(2)
+		\task $\Delta^n y_i = \Delta^{n-1} y_{i+1} + \Delta^{n-1} y_i$
+		\task $\Delta^n y_i = \Delta^{n-1} y_{i+1} - \Delta^{n-1} y_i$
+		\task $\Delta^n y_i = \Delta^{n+1} y_{i+1} - \Delta^{n+1} y_i$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question Which of the following is not a property of $\Delta$?
+	\begin{tasks}(2)
+		\task $\Delta[f(x) \pm g(x)]=\Delta f(x) \pm \Delta g(x)$
+		\task $\Delta[\alpha f(x)] = \alpha \Delta f(x), \alpha $ is constant
+		\task $\Delta^m \Delta^n f(x) = \Delta^{m+n} f(x) = \Delta^n \Delta^m f(x)$
+		\task $\Delta[f(x).g(x)] = f(x).\Delta g(x)$
+	\end{tasks}
+	Answer: \textbf{d}, $\Delta[f(x).g(x)] \ne f(x).\Delta g(x)$
+
+	\question $\Delta cos(x) = \dots$
+	\begin{tasks}(2)
+		\task $cos(x+h)-cos(x)$
+		\task $-2 sin(x+\frac{h}{2}) sin(\frac{h}{2})$
+		\task Both a and b
+		\task neither a nor b
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question $\Delta log(f(x)) = \dots$
+	\begin{tasks}(2)
+		\task $log \frac{f(x)+\Delta f(x)}{f(x)} $
+		\task $log \frac{f(x+h)}{f(x)} $
+		\task Both a and b
+		\task neither a nor b
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question What is the general formula of the backward difference operator $\nabla$?
+	\begin{tasks}(2)
+		\task $\nabla^n y_i = \nabla^{n-1} y_{i+1} + \nabla^{n-1} y_i$
+		\task $\nabla^n y_i = \nabla^{n-1} y_{i+1} - \nabla^{n-1} y_i$
+		\task $\nabla^n y_i = \nabla^{n+1} y_{i+1} - \nabla^{n+1} y_i$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{d}, $\nabla^n y_i = \nabla^{n-1} y_i - \nabla^{n-1} y_{i-1}$
+
+	\question What is the general formula of the backward difference operator $\nabla$?
+	\begin{tasks}(2)
+		\task $\nabla^n y_{i+1} = \nabla^{n-1} y_{i+1} + \nabla^{n-1} y_i$
+		\task $\nabla^n y_{i+1} = \nabla^{n-1} y_{i+1} - \nabla^{n-1} y_i$
+		\task $\nabla^n y_{i+1} = \nabla^{n+1} y_{i+1} - \nabla^{n+1} y_i$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question Which of the following is not a property of $\nabla$?
+	\begin{tasks}(2)
+		\task $\nabla[f(x) \pm g(x)]=\nabla f(x) \pm \nabla g(x)$
+		\task $\nabla[\alpha f(x)] = \alpha \nabla f(x), \alpha$ is variable
+		\task $\nabla^m \nabla^n f(x) = \nabla^{m+n} f(x) = \nabla^n \nabla^m f(x)$
+		\task $\nabla[f(x) \cdot g(x)] \neq [\nabla f(x)] \cdot g(x)$
+	\end{tasks}
+	Answer: \textbf{b}, $\nabla[\alpha f(x)] = \alpha \nabla f(x), \alpha$ is constant
+
+	\question What is the general formula of the central difference operator?
+	\begin{tasks}(2)
+		\task $\delta^n y_k = \delta^{n+1} y_{k+\frac{1}{2}} - \delta^{n-1} y_{k-\frac{1}{2}}$
+		\task $\delta^n y_k = \delta^{n-1} y_{k+\frac{1}{2}} + \delta^{n-1} y_{k-\frac{1}{2}}$
+		\task $\delta^n y_k = \delta^{n-1} y_{k+\frac{1}{2}} - \delta^{n-1} y_{k-\frac{1}{2}}$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question What is the formula of the distance operator?
+	\begin{tasks}(2)
+		\task $E^p y_k = y_{k+p}$
+		\task $E^p y_k = y_{k-p}$
+		\task $E^p y_k = y_{p+k}$
+		\task $E^p y_k = y_{p-k}$
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the formula of the average operator?
+	\begin{tasks}(2)
+		\task $\mu = \frac{1}{2}(E^{\frac{1}{2}} - E^{-\frac{1}{2}})$
+		\task $\mu = \frac{1}{2}(E^{-\frac{1}{2}} - E^{\frac{1}{2}})$
+		\task $\mu = \frac{1}{2}(E^{-\frac{1}{2}} + E^{\frac{1}{2}})$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question What is the general formula of the differetial operator?
+	\begin{tasks}(2)
+		\task $D f(x) = \frac{d}{dx} f(x)$
+		\task $D^n f(x) = \frac{d^n}{dx^n} f(x)$
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question $\Delta^0 y = \dots$.
+	\begin{tasks}(2)
+		\task $y$
+		\task $0$
+		\task $1$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the relation between $E$ and $\Delta$?
+	\begin{tasks}(2)
+		\task $\Delta = E - 1$
+		\task $\Delta = E + 1$
+		\task $\Delta = 1 - E$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the relation between $E$ and $\nabla$?
+	\begin{tasks}(2)
+		\task $\nabla E^{-\frac{1}{2}} = \delta$
+		\task $E = (1 - \nabla)^{-1}$
+		\task $\nabla = 1 - E^{-1}$
+		\task All of them
+	\end{tasks}
+	Answer: \textbf{d}
+
+	\question Which of the following relations of the central difference operator $\delta$ is false?
+	\begin{tasks}(2)
+		\task $\delta = E^{\frac{1}{2}} - E^{-\frac{1}{2}}$
+		\task $\delta^n y_k = \delta^{n-1} y_{k+\frac{1}{2}} - \delta^{n-1} y_{k-\frac{1}{2}}$
+		\task $\delta = E^{\frac{1}{2}} \nabla$
+		\task $\delta = E^{-\frac{1}{2}} \Delta$
+		\task $\delta = E^{\frac{1}{2}} (1 - E^{-1})$
+		\task $\delta = E^{-\frac{1}{2}} (E - 1)$
+		\task $\delta = (\nabla \Delta)^{\frac{1}{2}}$
+		\task $\delta = (\Delta \nabla)^{\frac{1}{2}}$
+		\task $\delta = (\Delta - \nabla)^{\frac{1}{2}}$
+		\task None of them
+	\end{tasks}
+	Answer: \textbf{j}
+
+	\question What is the relation between $E$ and $D$?
+	\begin{tasks}(2)
+		\task $E = e^{-hD}$
+		\task $hD = log(1+\Delta)$
+		\task $hD = log(\nabla-1)$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question When does the generalized power coincide with the ordinary power s.t. $x^{[n]}=x^n$?
+	\begin{tasks}(2)
+		\task if $h = 0$
+		\task if $n > 5$
+		\task $h$ is constatnt
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the formula of the generalized power?
+	\begin{tasks}(2)
+		\task $x^{[n]} = x(x-h)(x-2h)...[x-(n-1)h]$
+		\task $x^{n} = x(x-h)(x-2h)...[x-(n-1)h]$
+		\task $x^{[n]} = x(x-h)(x-2h)...[x-(n+1)h]$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the formula of the first difference of the generalized power?
+	\begin{tasks}(2)
+		\task $\Delta x^{[n]} = nhx^{[n+1]}$
+		\task $\Delta x^{n} = nhx^{[n-1]}$
+		\task $\Delta x^{[n]} = nhx^{n-1}$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question What is the formula of the second difference of the generalized power?
+	\begin{tasks}(2)
+		\task $\Delta^2 x^{[n]} = n(n+1) h^2 x^{n-2}$
+		\task $\Delta^2 x^{[n]} = n(n-1) h^2 x^{n+2}$
+		\task $\Delta^2 x^{[n]} = n(n-1) h^2 x^{n-2}$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{d}, $\Delta^2 x^{[n]} = n(n-1) h^2 x^{[n-2]}$
+
+	\question What is the general formula of the differences of the generalized power?
+	\begin{tasks}(2)
+		\task $\Delta^k x^{[n]} = n(n-1)...[n-(k-1)] h x^{[n-k]}$
+		\task $\Delta^k x^{[n]} = n(n-1)...[-k+(n+1)] h^k x^{[n-k]}$
+		\task $\Delta^k x^{[n]} = n(n-1)...[n-(k+1)] h^k x^{[n-k]}$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}, $\Delta^k x^{[n]} = n(n-1)...[n-(k-1)] h^k x^{[n-k]} \equiv \Delta^k x^{[n]} = n(n-1)...[-k+(n+1)] h^k x^{[n-k]}$
+
+	\question $\Delta^k x^{[n]} = 0$ iff \dots
+	\begin{tasks}(2)
+		\task $n < k$
+		\task $k \ge n$
+		\task $k = n$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\section{Interpolation for the case of equally spaced points}
+
+	\question The problem can have $\dots$ solution(s).
+	\begin{tasks}(2)
+		\task infinity
+		\task no
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question What is the newton's first interpolation formula?
+	\begin{tasks}(1)
+		\task $p_n(x) = y_0 + q \Delta y_0 + \frac{q(q-1)}{2!} \Delta^2 y_0 + \dots + \frac{q(q-1)\dots(q-n+1)}{n!} \Delta^n y_n$
+		\task $p_n(x) = y_0 + \frac{\Delta y_0}{h}(x-x_0)^{[1]} + \frac{\Delta^2 y_0}{2!h^2}(x-x_0)^{[2]} + \dots + \frac{\Delta^n y_0}{n!h^n}(x-x_0)^{[n]}$
+		\task $p_n(x) = y_0 + q \Delta y_0 + \frac{q(q-1)}{2!} \Delta^2 y_0 + \dots + \frac{q(q-1)\dots(q+n-1)}{n!} \Delta^n y_0$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question What is $q$ in the newton's first interpolation formula?
+	\begin{tasks}(1)
+		\task $\frac{-x_0+x}{h}$, the number of steps needed to reach a point $x$ proceeding from $x_0$
+		\task $\frac{x-x_n}{h}$, the number of steps needed to reach a point $x$ proceeding from $x_n$
+		\task $\frac{x-x_0}{h}$, the number of steps needed to reach a point $x_0$ proceeding from $x$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the formula of the coefficients in newton's first interpolation formula?
+	\begin{tasks}(2)
+		\task $a_i = \frac{\Delta^i y_i}{i!h^i}$, $(i = 0, 1, \dots, n - 1)$
+		\task $a_i = \frac{\Delta^i y_i}{i!h^i}$, $(i = 0, 1, \dots, n + 1)$
+		\task $a_i = \frac{\Delta^i y_i}{i!h^i}$, $(i = 0, 1, \dots, n)$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}, $a_i = \frac{\Delta^i y_0}{i!h^i}$, $(i = 0, 1, \dots, n)$
+
+	\question What is the newton's second interpolation formula?
+	\begin{tasks}(1)
+		\task $p_n(x) = y_n + q \Delta y_{n-1} + \frac{q(q+1)}{2!} \Delta^2 y_{n-2} + \dots + \frac{q(q+1)\dots(q+n-1)}{n!} \Delta^n y_0$
+		\task $p_n(x) = y_n + \frac{\Delta y_{n-1}}{h}(x-x_n)^{[1]} + \frac{\Delta^2 y_{n-2}}{2!h^2}(x-x_{n-1})^{[2]} + \dots + \frac{\Delta^n y_0}{n!h^n}(x-x_1)^{[n]}$
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question What is $q$ in the newton's second interpolation formula?
+	\begin{tasks}(1)
+		\task $\frac{-x_0+x}{h}$, the number of steps needed to reach a point $x$ proceeding from $x_0$
+		\task $\frac{-x_n+x}{h}$, the number of steps needed to reach a point $x_n$ proceeding from $x$
+		\task $\frac{x-x_n}{h}$, the number of steps needed to reach a point $x$ proceeding from $x_n$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question What is the formula of the coefficients in newton's second interpolation formula?
+	\begin{tasks}(2)
+		\task $a_i = \frac{\Delta^i y_{n-i}}{i!h^i}$, $(i = 0, 1, \dots, n)$
+		\task $a_i = \frac{\Delta^i y_{n+i}}{i!h^i}$, $(i = 0, 1, \dots, n)$
+		\task $a_i = \frac{\Delta^i y_n}{i!h^i}$, $(i = 0, 1, \dots, n)$
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\section{Interpolation for the case of unequally spaced points}
+
+	\question What is Lagrange's interpolation formula used for?
+	\begin{tasks}(1)
+		\task Curve fitting
+		\task Numerical integration
+		\task Root finding
+		\task Optimization
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question Which of the following formulas is used for arbitrary specified points?
+	\begin{tasks}(2)
+		\task Gauss first interpolation formula
+		\task Newten's first interpolation formula
+		\task Newten's second interpolation formula
+		\task Lagrange's interpolation formula
+	\end{tasks}
+	Answer: \textbf{d}
+
+	\question Which of the following is false?
+	\begin{tasks}(1)
+		\task The Lagrange polynomial is unique
+		\task The Lagrange interpolation polynomial can coincides with the Newton interpolation \\polynomial
+		\task The Lagrange interpolation polynomial cannot coincides with the Newton interpolation \\polynomial
+		\task Lagrange's interpolation formula is used for arbitrary specified points
+	\end{tasks}
+	Answer: \textbf{c}, if the points are equally spaced, then the Lagrange interpolation polynomial coincides with the Newton interpolation polynomial
+
+	\question What does it mean that the arguments of the function are equally spaced?
+	\begin{tasks}(2)
+		\task They have a constant interval
+		\task They have a variable interval
+		\task They have a 0 interval
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What does it mean that the arguments of the function are unequally spaced?
+	\begin{tasks}(2)
+		\task They have a constant interval
+		\task They have a variable interval
+		\task They have a 0 interval
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question For functions with unequally spaced arguments, the concept of finite differences is generalized to $\dots$ .
+	\begin{tasks}(2)
+		\task Divided differences
+		\task Infinite differences
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question Which of the following is false about divided differences?
+	\begin{tasks}(1)
+		\task They remain unchanged under a permutation of the elements
+		\task They are symmetric functions of their arguments
+		\task For functions with equally spaced arguments, the concept of finite differences is generalized to divided differences
+		\task Generally, $(n+1)$th order divided differences are obtained from $n$th order divided differences by means of the recurrence relation
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\section{Numerical differentiation}
+
+	\question What is numerical differentiation primarily used for?
+	\begin{tasks}(1)
+		\task Solving nonlinear equations
+		\task Approximating derivatives of functions
+		\task Interpolating data points
+		\task Integrating functions numerically
+	\end{tasks}
+	Answer: \textbf{b}, Numerical differentiation is primarily used for approximating derivatives of functions.
+
+	\section{Numerical integration}
+
+	\question What is the purpose of numerical integration?
+	\begin{tasks}(1)
+		\task Approximating definite integrals of functions
+		\task Finding roots of equations
+		\task Solving linear systems of equations
+		\task Interpolating data points
+	\end{tasks}
+	Answer: \textbf{a}, Numerical integration is primarily used for approximating definite integrals of functions.
+
+	\question What is the trapezoidal rule used for in numerical integration?
+	\begin{tasks}(2)
+		\task Approximating definite integrals using linear interpolation
+		\task Solving systems of linear equations
+		\task Finding roots of nonlinear equations
+		\task Computing eigenvalues of matrices
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question What is the purpose of Simpson's rule in numerical integration?
+	\begin{tasks}(1)
+		\task Approximating derivatives of functions
+		\task Estimating the area under a curve
+		\task Solving linear systems of equations
+		\task Interpolating data points
+	\end{tasks}
+	Answer: \textbf{b}, Simpson's rule is primarily used for estimating the area under a curve in numerical integration.
+
+	\question Which statement accurately describes the relationship between the degree of the Newton-Cotes formula and the number of function evaluations?
+	\begin{tasks}(1)
+		\task The degree increases with the number of function evaluations
+		\task The degree is independent of the number of function evaluations
+		\task The degree decreases with the number of function evaluations
+		\task The degree is unrelated to the accuracy of the quadrature
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\section{Numerical solution for systems of linear equations}
+
+	\question Which of the following is false about gaussian elimination?
+	\begin{tasks}(1)
+		\task It is unusual
+		\task It is direct
+		\task A solution is obtained after a single application of gaussian elimination
+		\task It offers a method of refinement once a solution has been obtained
+		\task It is sensitive to rounding error
+	\end{tasks}
+	Answer: \textbf{d}, Once a solution has been obtained, Gaussian elimination offers no method of refinement.
+
+	\question Which of the following is not an iterative method?
+	\begin{tasks}(2)
+		\task The Jacobi method
+		\task The Gauss-Seidel method
+		\task Carl’s iterative method
+		\task Newton’s iterative method
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question Which of the following is an iterative method for approximating the solution of a system of $n$ linear equations in $n$ variables?
+	\begin{tasks}(2)
+		\task The Jacobi method
+		\task The Gauss-Seidel method
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{c}
+
+	\question Which of the following is an iterative method for approximating the zeros of a differentiable function?
+	\begin{tasks}(2)
+		\task The Jacobi method
+		\task Newton’s iterative method
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{b}
+
+	\question Determine whether the matrix
+	\[ A = \begin{bmatrix}
+			5 & -1 & 0  \\
+			2 & 8  & -3 \\
+			1 & -1 & 4  \\
+		\end{bmatrix} \]
+	is strictly diagonal dominant.
+	\begin{tasks}(1)
+		\task Yes, the matrix is strictly diagonal dominant.
+		\task No, the matrix is not strictly diagonal dominant.
+		\task It cannot be determined from the given information.
+		\task The matrix is not square, so the concept does not apply.
+	\end{tasks}
+	Answer: \textbf{a}, Yes, the matrix is strictly diagonal dominant.
+
+	\question Which of the following statements is false?
+	\begin{tasks}(1)
+		\task Strict diagonal dominance is a necessary condition for convergence of the Jacobi or Gauss-Seidel methods
+		\task If $A$ is strictly diagonally dominant, then the system of linear equations given by $AX=b$ has a unique solution to which the Jacobi method and the Gauss-Seidel method will converge for any initial approximation
+		\task An $n \times n$ matrix $A$ is strictly diagonally dominant if the absolute value of each entry on the main diagonal is greater than the sum of the absolute values of the other entries Diagonally Dominant in the same row.
+		\task Strict diagonal dominance is not a necessary condition for convergence of the Jacobi or Gauss-Seidel methods
+	\end{tasks}
+	Answer: \textbf{d},
+
+	% ask chatgpt
+	\question Which of the following systems of linear equations has a strictly diagonally dominant coefficient matrix?
+	\begin{tasks}(2)
+		\task $3x_1 - x_2 = -4$ \newline $2x_1 + 5x_2 = 2$
+		\task $4x_1 + 2x_2 - x_3 = -1$ \newline $x_1 + 2x_3 = -4$ \newline $3x_1 - 5x_2 + x_3 = 3$
+		\task Both a and b
+		\task Otherwise
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\question Which of the following systems of linear equations doesn't have a strictly diagonally dominant coefficient matrix?
+	\begin{tasks}(4)
+		\task
+		$\begin{cases}
+				2x + y = 5  \\
+				3x - 2y = 4 \\
+			\end{cases}$
+
+		\task
+		$\begin{cases}
+				4x - y = 7  \\
+				2x + 3y = 5 \\
+			\end{cases}$
+
+		\task
+		$\begin{cases}
+				3x - 2y = 6 \\
+				x + 4y = 9  \\
+			\end{cases}$
+
+		\task
+		$\begin{cases}
+				5x + 2y = 8  \\
+				-3x + 6y = 1 \\
+			\end{cases}$
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\section{Numerical solution of nonlinear algebraic equations}
+
+	\question Which numerical method is commonly used for solving a single nonlinear algebraic equation \(f(x) = 0\)?
+	\begin{tasks}(1)
+		\task Newton-Raphson method
+		\task Gaussian elimination
+		\task Euler's method
+		\task Simpson's rule
+	\end{tasks}
+	Answer: \textbf{a}, The Newton-Raphson method is commonly used for solving a single nonlinear algebraic equation.
+
+	\question In the context of numerical solutions for systems of nonlinear algebraic equations, which method requires the computation of partial derivatives?
+	\begin{tasks}(1)
+		\task Bisection method
+		\task Secant method
+		\task Newton-Raphson method
+		\task Gaussian elimination
+	\end{tasks}
+	Answer: \textbf{c}, The Newton-Raphson method requires the computation of partial derivatives in the context of systems of nonlinear algebraic equations.
+
+	\question Which statement accurately describes the Bisection Method for root finding?
+	\begin{tasks}(2)
+		\task It involves dividing the interval and selecting the subinterval where the function changes sign.
+		\task It uses the derivative of the function to iteratively approach the root.
+		\task It approximates the root by linear interpolation between function values.
+		\task It is specifically designed for solving linear equations.
+	\end{tasks}
+	Answer: \textbf{a}
+
+	\section{Essay}
+	\question What is numerical analysis?
+
+	branch in mathematics that focuses on studying and developing numerical methods
+
+	\question What is the ultimate aim of the field of numerical analysis?
+
+	to provide convenient methods for obtaining useful solutions to mathematical problems and for extracting useful information from available solutions which are not expressed in tractable forms.
+
+	\question What is the strictly diagonally dominant matrix?
+
+	An $n x n$ matrix $A$ is strictly diagonally dominant if the absolute value of each entry on the main diagonal is greater than the sum of the absolute values of the other entries Diagonally Dominant in the same row.
+
+	\question What is a significant digit?
+
+	A significant digit of an approximate number is any nonzero digit, in its decimal representation, or any zero lying between significant digits or used as a placeholder, to indicate a retained place. All other zeros of the approximate number that serve only to fix the position of the decimal point are not to be considered significant digits.
+
+	\question What is a discretization error?
+
+	the error that occurs when a derivative is approximated with a difference quotient
+
+	\section{Notes}
+	$\bullet$ Gaussian elimination is sensitive to rounding error
+
+	$\bullet$ For example, in calculus you probably studied Newton’s iterative method for approximating the zeros of a differentiable function. In this chapter we look at two iterative methods for approximating the solution of a system of n linear equations in n variables.
+
+	$\bullet$ For tables with unequally spaced values of the argument (variable interval), the concept of finite differences is generalized to
+
+	\section{About}
+
+	This pdf is written using the following technologies:-
+	\begin{itemize}
+		\item LaTeX: A typesetting system commonly used for the production of scientific and mathematical documents.
+		\item Neovim: A highly extensible and feature-rich text editor, descended from Vim, focused on enhanced performance and extensibility.
+		\item Zathura: A minimalist and lightweight document viewer designed for viewing PDFs and other document formats with a Vim-like keybinding interface.
+	\end{itemize}
+
+
+\end{questions}
+\end{document}
+
