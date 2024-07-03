@@ -79,6 +79,19 @@ public:
 
   int get_back() { return arr[size - 1]; }
 
+  void right_rotate() {
+    int tmp = arr[size - 1];
+    for (int i = size - 1; i >= 1; --i)
+      arr[i] = arr[i - 1];
+    arr[0] = tmp;
+  }
+  void left_rotate() {
+    int tmp = arr[0];
+    for (int i = 0; i < size - 1; ++i)
+      arr[i] = arr[i + 1];
+    arr[size - 1] = tmp;
+  }
+
   ~Vector() {
     delete[] arr;
     arr = nullptr;
@@ -91,10 +104,13 @@ int main() {
   v.push_back(1);
   v.push_back(2);
   v.push_back(3);
-  v.push_back(3);
-  v.push_back(3);
-  v.push_back(3);
   v.insert(9, 5);
+  v.print();
+  v.left_rotate();
+  v.print();
+  v.right_rotate();
+  v.print();
+  v.right_rotate();
   v.print();
   return 0;
 }

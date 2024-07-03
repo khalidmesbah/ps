@@ -1,65 +1,41 @@
-#include <cassert>
 #include <iostream>
-#include <iterator>
 #include <vector>
 
 using namespace std;
 
-class Vector {
-private:
-  int *arr = nullptr;
-  int size = 0;
-
+class Solution {
 public:
-  Vector(int size) : size(size) {
-    if (size < 0) {
-      size = 1;
+  vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2) {
+    int len1 = nums1.size();
+    int len2 = nums2.size();
+
+    vector<int> ans(len1, -1);
+
+    for (int i = 0; i < len1; ++i) {
+      for (int j = 0; j < len2; ++j) {
+        if (nums1[i] == nums2[j]) {
+          for (int k = j + 1; k < len2; ++k) {
+            if (nums2[k] > nums2[j]) {
+              ans[i] = nums2[k];
+              break;
+            }
+          }
+        }
+      }
     }
-    arr = new int[size]{};
-  }
 
-  int get(int idx) {
-    assert(0 <= idx && idx < size);
-    return arr[idx];
-  }
-
-  void set(int idx, int val) {
-    assert(0 <= idx && idx < size);
-    arr[idx] = val;
-  }
-
-  void print() {
-    for (int i = 0; i < size; ++i) {
-      cout << arr[i] << " ";
-    }
-    cout << endl;
-  }
-
-  int find(int val) {
-    for (int i = 0; i < size; ++i) {
-      if (arr[i] == val)
-        return i;
-    }
-    return -1;
-  }
-
-  int get_front() { return arr[0]; };
-
-  int get_back() { return arr[size - 1]; };
-
-  ~Vector() {
-    delete[] arr;
-    arr = nullptr;
+    return ans;
   }
 };
 
 int main() {
-  Vector v(10);
-  for (int i = 0; i < 10; ++i) {
-    v.set(i, i);
+  Solution sol;
+  vector<int> v1 = {4, 1, 2};
+  vector<int> v2 = {1, 3, 4, 2};
+  auto res = sol.nextGreaterElement(v1, v2);
+
+  for (int i = 0; i < res.size(); ++i) {
+    cout << res[i] << " ";
   }
-  v.print();
-  cout << v.find(5) << endl;
-  cout << v.find(44);
   return 0;
 }
