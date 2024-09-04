@@ -1,0 +1,18 @@
+
+  void delete_node_with_key(int value) { // O(n) time - O(1) memory
+    if (!length)
+      cout << "Empty list!\n";
+    else if (head->data == value)
+      delete_first();
+    else {
+      for (Node *cur = head, *prv = nullptr; cur; prv = cur, cur = cur->next) {
+        if (cur->data == value) {
+          delete_next_node(prv); // connect prv with after
+          break;
+        }
+      }
+      cout << "Value not found!\n";
+    }
+    debug_verify_data_integrity();
+  }
+

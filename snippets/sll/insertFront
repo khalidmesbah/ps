@@ -1,0 +1,13 @@
+	void insert_front(int value) {		// O(1) time - O(1) memory
+		Node* item = new Node(value);
+		add_node(item);
+
+		item->next = head;
+		head = item;
+
+		if(length == 1)
+			tail = head;
+
+		debug_verify_data_integrity();
+	}
+

@@ -1,0 +1,11 @@
+
+  void insert_end(int value) {
+    Node *item = new Node(value);
+    if (!head)
+      head = tail = item;
+    else
+      tail->next = item, tail = item;
+    ++length;
+
+    debug_add_node(item);
+  }

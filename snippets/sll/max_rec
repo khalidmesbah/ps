@@ -1,0 +1,13 @@
+
+  int max(Node *head = nullptr,
+          bool is_first_call = true) { // O(n) time - O(n) memory
+    // It is tricky to have function name same as standard
+    // use std for standard and this-> for the class for clarity
+    if (is_first_call)
+      return this->max(this->head, false);
+
+    if (head == nullptr)
+      return INT_MIN; // initial min value
+
+    return std::max(head->data, this->max(head->next, false));
+  }

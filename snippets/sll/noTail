@@ -1,0 +1,31 @@
+
+  void print() {
+    for (Node *cur = head; cur; cur = cur->next)
+      cout << cur->data << " ";
+		cout << "\n";
+  }
+
+  void add_element(int value) {
+    Node *new_node = new Node(value);
+    new_node->next = head;
+    head = new_node;
+  }
+
+  Node *get_tail() {
+    for (Node *cur = head; cur; cur = cur->next)
+      if (!cur->next)
+        return cur;
+    return nullptr;
+  }
+
+	Node* get_tail() {		// O(n) time - O(1) memory
+		if (!head)
+			return nullptr;
+
+		Node* cur = head;
+		// stop at cur->next, as this will be the tail
+		for (; cur->next; cur = cur->next)
+			;
+
+		return cur;
+	}

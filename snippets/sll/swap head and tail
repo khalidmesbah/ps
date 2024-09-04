@@ -1,0 +1,40 @@
+
+	void swap_head_tail() {		// O(n) time - O(1) memory
+		if (!head || !head->next)	// 0 or 1 node. We can use length also if(length <= 1)
+			return;
+
+		Node* prv = get_previous(tail);	// node before tail
+
+		tail->next = head->next;
+
+		prv->next = head;
+		head->next = nullptr;
+
+		swap(tail, head);	// Set new head and tail
+
+		debug_verify_data_integrity();
+	}
+
+  void swap_head_tail() {
+    cout << "start ------------------------------";
+    if (!head || !head->next)
+      return;
+
+    // 1st way => not working
+    // Node *prvTail = head;
+    // for (; prvTail->next;)
+    //   prvTail = prvTail->next;
+    //
+    // 2nd way => working
+    Node *prvTail = head;
+    for (Node *cur = head; cur->next; cur = cur->next) {
+      prvTail = cur;
+    }
+
+    tail->next = head->next;
+    head->next = nullptr;
+    prvTail->next = head;
+
+    swap(head, tail);
+    debug_verify_data_integrity();
+  }

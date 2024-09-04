@@ -1,0 +1,99 @@
+  // ------------------------------------
+
+  void delete_even_positions() { // O(n) time - O(1) memory
+    if (!head || !head->next)
+      return;
+    // maintain previous and delete its next (even order)
+    for (Node *prv = head; prv->next; prv = prv->next) {
+      Node *cur = prv->next;
+
+      if (cur == tail)
+        tail = prv;
+
+      prv->next = cur->next;
+
+      delete_node(cur);
+
+      if (!prv->next)
+        break;
+    }
+    debug_verify_data_integrity();
+  }
+
+  ------------------------------------ //
+
+  void delete_even_positions() { // O(n) time - O(1) memory
+    if (!head || !head->next)
+      return;
+    // maintain previous and delete its next (even order)
+    for (Node *prv = head, *cur = head->next; cur;
+         prv = prv->next, cur = prv->next) {
+
+      if (cur == tail)
+        tail = prv;
+
+      prv->next = cur->next;
+      delete_node(cur);
+
+      if (!prv->next)
+        break;
+    }
+    debug_verify_data_integrity();
+  }
+  void delete_even_positions() { // O(n) time - O(1) memory
+    if (length <= 1)
+      return;
+    // maintain previous and delete its next (even order)
+    for (Node *cur = head->next, *prv = head; cur;) {
+      delete_next_node(prv); // prev is odd, prev-next is even
+      if (!prv->next)        // tail
+        break;
+      cur = prv->next->next;
+      prv = prv->next;
+    }
+    debug_verify_data_integrity();
+  }
+
+  void delete_even_positions() {
+    int cnt = 2;
+    for (Node *cur = head->next, *prv = head; cur;) {
+
+      if (cnt % 2 == 0) {
+        prv->next = cur->next;
+
+        if (cur == tail)
+          tail = prv;
+
+        Node *to_delete = cur;
+        cur = cur->next;
+
+        delete_node(to_delete);
+      } else {
+        prv = cur;
+        cur = cur->next;
+      }
+      cnt++;
+    }
+
+    debug_verify_data_integrity();
+  }
+
+  void delete_even_positions() { // O(n) time - O(1) memory
+    if (!head || !head->next)
+      return;
+    // maintain previous and delete its next (even order)
+    for (Node *cur = head->next, *prv = head; cur;
+         prv = prv->next, cur = prv->next) {
+
+      Node *to_delete = prv->next;
+      if (to_delete == tail)
+        tail = prv;
+
+      prv->next = prv->next->next;
+      delete_node(to_delete);
+
+      if (!prv->next)
+        break;
+    }
+    debug_verify_data_integrity();
+  }

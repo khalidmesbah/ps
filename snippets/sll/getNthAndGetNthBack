@@ -1,0 +1,30 @@
+
+  Node *get_nth(int n) {
+    // n is 1-based
+    int cnt = 1;
+    for (Node *cur = head; cur; cur = cur->next, cnt++)
+      if (cnt == n)
+        return cur;
+
+    return nullptr;
+  }
+
+  Node *get_nth(int n) {
+    for (Node *cur = head; cur; cur = cur->next)
+      if (n-- == 1)
+        return cur;
+
+    return nullptr;
+  }
+
+  Node *get_nth_back(int n) { return get_nth(length + 1 - n); }
+
+  Node *get_nth_back(int n) { // O(n) time - O(1) memory
+    n = length + 1 - n;
+    int cnt = 0;
+    for (Node *cur = head; cur; cur = cur->next)
+      if (++cnt == n)
+        return cur;
+
+    return nullptr; // still more steps needed - NOT found
+  }

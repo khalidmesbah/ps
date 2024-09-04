@@ -1,0 +1,38 @@
+
+	void reverse() {		// O(n) time - O(1) memory
+		if (length <= 1)
+			return;
+
+		tail = head;
+		Node *prv = head;
+		head = head->next;
+		while (head) {
+			// store & reverse link
+			Node* next = head->next;
+			head->next = prv;
+
+			// move step
+			prv = head;
+			head = next;
+		}
+		// Finalize head and tail
+		head = prv;
+		tail->next = nullptr;
+
+		debug_verify_data_integrity();
+	}
+
+  void reverse() {
+    if (!head || !head->next)
+      return;
+
+    for (Node *cur = head, *prev = nullptr, *next = nullptr; cur; cur = next) {
+      next = cur->next;
+      cur->next = prev;
+      prev = cur;
+      if (!next)
+        tail = head, head = cur;
+    }
+    debug_verify_data_integrity();
+  }
+

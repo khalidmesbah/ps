@@ -1,0 +1,43 @@
+  void delete_last_occurrence(int target) { // O(n) time - O(1) memory
+    if (!length)
+      return;
+
+    Node *last_occur = nullptr;
+    bool is_found = false;
+
+    // Find the last occurrence
+    for (Node *cur = head, *prv = nullptr; cur; prv = cur, cur = cur->next) {
+      if (cur->data == target)
+        is_found = true, last_occur = prv;
+    }
+
+    // remove it
+    if (is_found) {
+      if (last_occur)
+        delete_next_node(last_occur);
+      else
+        // if prv is null, then found at head
+        delete_front();
+    }
+    debug_verify_data_integrity();
+  }
+
+  // TODO: why not working
+  void delete_last_occurrence(int target) {
+    if (!head)
+      return;
+
+    Node *last_occur = nullptr;
+    int cnt = 1;
+    for (Node *cur = head; cur; cur = cur->next) {
+      if (cur->data == target)
+        last_occur = cur, cnt++;
+    }
+
+    if (!last_occur)
+      return;
+
+    delete_nth_node(cnt);
+
+    debug_verify_data_integrity();
+  }

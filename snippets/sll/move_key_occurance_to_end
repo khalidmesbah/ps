@@ -1,0 +1,86 @@
+
+  Node *move_to_end(Node *cur, Node *prv) {
+    Node *next = cur->next;
+    tail->next = cur;
+    cur->next = nullptr;
+    tail = cur;
+
+    if (prv)
+      prv->next = next;
+    else
+      head = next; // cur was head
+
+    return next;
+  }
+
+  Node *move_to_end(Node *cur, Node *prv) {
+    Node *next = cur->next;
+    tail->next = cur;
+
+    if (prv)
+      prv->next = next;
+    else
+      head = next; // cur was head
+
+    tail = cur;
+    tail->next = nullptr;
+    return next;
+  }
+  void move_key_occurance_to_end(int key) { // O(n) time - O(1) memory
+    if (length <= 1)
+      return;
+
+    // Simple idea with tail: for each matching key, remove it and add to the
+    // end!
+
+    int len = length; // iterate length steps, don't go infinte with added ones
+    for (Node *cur = head, *prv = nullptr; len--;) {
+      if (cur->data == key) // no change for prv
+        cur = move_to_end(cur, prv);
+      else
+        prv = cur, cur = cur->next; // normal step
+    }
+    debug_verify_data_integrity();
+  }
+
+  // the best
+
+  void move_key_occurance_to_end(int key) { // O(n) time - O(1) memory
+    if (length <= 1)
+      return;
+
+    // Declare the move_to_end function inside move_key_occurance_to_end
+    auto move_to_end = [&](Node *cur) -> Node * {
+      Node *next = cur->next;
+      Node *prv = nullptr;
+
+      for (Node *cur2 = head; cur2->next; prv = cur2, cur2 = cur2->next) {
+        if (cur2 == cur) {
+          break;
+        }
+      }
+
+      tail->next = cur;
+      cur->next = nullptr;
+      tail = cur;
+
+      if (prv) {
+        prv->next = next;
+      } else {
+        head = next;
+      }
+
+      return next;
+    };
+
+    int len = length;
+    for (Node *cur = head; len--;) {
+      if (cur->data == key) {
+        cur = move_to_end(cur);
+      } else {
+        cur = cur->next; // normal step
+      }
+    }
+
+    debug_verify_data_integrity();
+  }

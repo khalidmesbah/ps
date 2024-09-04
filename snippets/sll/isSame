@@ -1,0 +1,27 @@
+
+  // TODO: try again
+  bool is_same1(const LinkedList &other) { // O(n) time - O(1) memory
+    Node *h1 = head, *h2 = other.head;
+
+    while (h1 && h2) {
+      if (h1->data != h2->data)
+        return false;
+      h1 = h1->next, h2 = h2->next;
+    }
+
+    return !h1 && !h2; // make sure both ends together
+  }
+
+  bool is_same(const LinkedList &other) { // o(1) memory O(n) time
+    if (length != other.length)
+      return false;
+
+    for (Node *cur = head, *cur2 = other.head; cur;
+         cur = cur->next, cur2 = cur2->next) {
+      if (cur->data != cur2->data)
+        return false;
+    }
+
+    return true;
+  }
+

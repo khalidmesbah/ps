@@ -1,0 +1,23 @@
+
+	void odd_pos_even_pos() {		// O(n) time - O(1) memory
+		if (length <= 2)
+			return;
+
+		Node* first_even = head->next;
+		Node* cur_odd = head;
+
+		while (cur_odd->next && cur_odd->next->next) {
+			Node* next_even = cur_odd->next;
+			// connect odd with odd and even with even
+			cur_odd->next = cur_odd->next->next;
+			next_even->next = next_even->next->next;
+			cur_odd = cur_odd->next;
+			// for odd length, tail is changed to last even node
+			if (length % 2 == 1)
+				tail = next_even;
+		}
+		// connect last odd with the first even
+		cur_odd->next = first_even;
+
+		debug_verify_data_integrity();
+	}

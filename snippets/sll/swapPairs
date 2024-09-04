@@ -1,0 +1,15 @@
+
+  void swap_pairs() { // O(1) memory, O(n) time
+    for (Node *cur{head}; cur; cur = cur->next) {
+      if (cur->next) {
+        swap(cur->data, cur->next->data);
+        cur = cur->next;
+      }
+    }
+  }
+
+  void swap_pairs() {
+    for (Node *cur = head; cur && cur->next; cur = cur->next->next) {
+      swap(cur->data, cur->next->data);
+    }
+  }

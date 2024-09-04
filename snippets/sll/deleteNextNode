@@ -1,0 +1,23 @@
+
+  void delete_next_node(Node *node) {
+    Node *to_delete = node->next;
+    if (to_delete == tail)
+      tail = node;
+    node->next = node->next->next;
+
+    delete_node(to_delete);
+  }
+
+  void delete_next_node(Node *node) {
+    assert(node);
+
+    Node *to_delete = node->next;
+    bool is_tail = to_delete == tail;
+
+    // node->next in middle to delete
+    node->next = node->next->next;
+
+    delete_node(to_delete);
+    if (is_tail)
+      tail = node;
+  }

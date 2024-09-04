@@ -1,0 +1,48 @@
+
+  void delete_last() {
+    if (length <= 1) {
+      delete_first();
+      return;
+    }
+    // Get the node before tail: its order is length-1 node
+    Node *previous = get_nth(length - 1);
+
+   delete_node(tail);
+    tail = previous;
+    tail->next = nullptr;
+
+    debug_verify_data_integrity();
+  }
+
+  void delete_last() {
+    Node *prv = nullptr;
+    for (Node *cur = head; cur->next; cur = cur->next)
+      prv = cur;
+
+    prv->next = nullptr;
+    delete_node(tail);
+    tail = prv;
+    debug_verify_data_integrity();
+  }
+
+
+  void delete_last() {
+    if (!head)
+      return;
+
+    if (!head->next) {
+      delete_node(head);
+      head = tail = nullptr;
+      return;
+    }
+
+    Node *prv = head;
+
+    while (prv->next->next)
+      prv = prv->next;
+
+    delete_node(prv->next);
+    prv->next = nullptr;
+    tail = prv;
+    debug_verify_data_integrity();
+  }

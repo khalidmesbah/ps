@@ -1,0 +1,41 @@
+
+	void insert_alternate(LinkedList &another) {		// O(n) time - O(1) memory
+		if (!another.length)
+			return;
+
+		if (!length) {
+			// copy data
+			head = another.head;
+			tail = another.tail;
+			length = another.length;
+			debug_data = another.debug_data;
+
+		} else {
+			// Iterate one by one, add node in right place
+			// If this ended first, then we link the remain in this list
+			Node* cur2 = another.head;
+			for (Node* cur1 = head; cur1 && cur2;) {
+				Node* cur2_next_temp = cur2->next;
+				insert_after(cur1, cur2);
+				another.length--;
+				cur2 = cur2_next_temp;
+
+				if (cur1 == tail) {
+					tail = another.tail;
+					cur1->next->next = cur2;
+					length += another.length;
+					break;
+
+					// there is a missing thing here
+					// we need to add remaining nodes to debug data
+					// let's skip
+				}
+				cur1 = cur1->next->next;
+			}
+		}
+
+		another.head = another.tail = nullptr;
+		another.length = 0;
+		another.debug_data.clear();
+		debug_verify_data_integrity();
+	}
