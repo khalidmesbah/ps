@@ -1,0 +1,18 @@
+
+	Node* delete_and_link(Node* cur) {
+		// remove this node, but connect its neighbors
+		Node* ret = cur->prev;
+		link(cur->prev, cur->next);
+		delete_node(cur);
+
+		return ret;
+	}
+
+  Node *delete_and_link(Node *cur) {
+    // remove this node, but connect its neighbors
+    Node *ret = cur->prev;
+    link(cur->prev, cur->next);
+    delete_node(cur);
+
+    return ret;
+  }

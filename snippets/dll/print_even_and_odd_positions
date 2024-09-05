@@ -1,0 +1,25 @@
+// bugs
+- what if the ll is empty in the even printing?
+  void print_even_and_odd_positions() {
+    cout << "normal positions: \n";
+    for (Node *cur = head; cur; cur = cur->next) {
+      cout << cur->data << " ";
+    }
+
+    cout << "\n";
+
+    cout << "even -> ";
+    for (Node *cur = head; cur && cur->next; cur = cur->next->next) {
+      cout << cur->next->data << " ";
+    }
+
+    cout << "\n";
+
+    cout << "odd -> ";
+    for (Node *cur = head; cur; cur = cur->next->next) {
+      cout << cur->data << " ";
+      if (!cur->next)
+        break;
+    }
+    cout << "\n";
+  }

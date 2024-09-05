@@ -1,0 +1,14 @@
+
+  void insert_end(int value) {
+    Node *item = new Node(value);
+    add_node(item);
+
+    if (!head)
+      head = tail = item;
+    else {
+      tail->next = item;
+      item->prev = tail;
+      tail = item;
+    }
+    debug_verify_data_integrity();
+  }

@@ -1,0 +1,29 @@
+
+	void delete_end() {
+		if(!head)
+			return;
+		Node* cur = tail->prev;
+		delete_node(tail);
+		tail = cur;
+
+		// Integrity change
+		if(tail)
+			tail->next = nullptr;
+		else if(!length)
+			head = nullptr;
+
+		debug_verify_data_integrity();
+	}
+
+  void delete_end() {
+    if (!head)
+      return;
+
+    Node *new_tail = tail->prev;
+    delete_node(tail);
+    tail = new_tail;
+
+    tail ? (tail->next = nullptr) : (head = nullptr);
+
+    debug_verify_data_integrity();
+  }

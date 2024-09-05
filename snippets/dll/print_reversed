@@ -1,0 +1,8 @@
+
+  void print_reversed() {
+    for (Node *cur = tail; cur; cur = cur->prev) {
+      cout << cur->data << " ";
+    }
+    cout << "\n";
+  }
+

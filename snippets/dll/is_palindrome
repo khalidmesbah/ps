@@ -1,0 +1,17 @@
+
+  typedef Node *Lnode;
+  bool is_palindrome() {
+    if (length <= 1)
+      return true;
+
+    int len = length / 2;
+    Lnode start{head}, end{tail};
+
+    while (len--) {
+      if (start->data != end->data)
+        return false;
+      start = start->next;
+      end = end->prev;
+    }
+    return true;
+  }

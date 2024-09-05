@@ -1,0 +1,42 @@
+
+	void add_num(LinkedList &another) {
+		// let X = max(length, another.length)
+		// let Y = max(length, another.length) - min(length, another.length)
+		// O(X) time - O(Y) memory
+		if (!another.length)
+			return;
+
+		Node* my_cur = head;
+		Node* his_cur = another.head;
+		int carry = 0, my_value, his_value;
+		
+		// refresh first adding 2 numbers and handling their carry
+		// Iterate sequentially over both
+		// take the current values, add and compute the value and the carry
+
+		while (my_cur || his_cur) {
+			my_value = 0, his_value = 0;
+			if (my_cur)
+				my_value = my_cur->data;
+			if (his_cur) {
+				his_value = his_cur->data;
+				his_cur = his_cur->next;
+			}
+
+			my_value += his_value + carry;
+			carry = my_value / 10;
+			my_value %= 10;
+
+			if(my_cur) {
+				my_cur->data = my_value;
+				my_cur = my_cur->next;
+			}
+			else
+				insert_end(my_value);
+			// we can even stop earlier
+		}
+		if(carry)
+			insert_end(carry);
+
+		debug_verify_data_integrity();
+	}

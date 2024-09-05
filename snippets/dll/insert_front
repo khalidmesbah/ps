@@ -1,0 +1,14 @@
+
+  void insert_front(int value) {
+    Node *item = new Node(value);
+    add_node(item);
+
+    if (!head) {
+      head = tail = item;
+    } else {
+      item->next = head;
+      head->prev = item;
+      head = item;
+    }
+    debug_verify_data_integrity();
+  }

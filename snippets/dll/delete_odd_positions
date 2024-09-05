@@ -1,0 +1,25 @@
+
+  void delete_odd_positions() {
+    // let's make odd positions even! Reuse old code :)
+    insert_front(-1); // dummy node
+    delete_even_positions();
+    delete_front();
+  }
+
+  void delete_odd_positions() {
+    for (Node *cur = head; cur && cur->next;) {
+      Node *next = cur->next->next;
+
+      if (head == cur) {
+        delete_front();
+      } else if (tail == cur) {
+        delete_end();
+      } else {
+        delete_and_link(cur);
+      }
+
+      cur = next;
+    }
+    debug_verify_data_integrity();
+  }
+

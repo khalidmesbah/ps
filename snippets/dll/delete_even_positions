@@ -1,0 +1,47 @@
+
+	void delete_even_positions() {
+		if (length <= 1)
+			return;
+		//cur is always odd and ->next is even
+		for(Node *cur = head; cur && cur->next; cur = cur->next) {
+			delete_and_link(cur->next);
+			if (!cur->next)
+				tail = cur;	// in even length, the tail will change
+		}
+		debug_verify_data_integrity();
+	}
+
+  void delete_even_positions() {
+    if (length <= 1)
+      return;
+    // cur is always odd and ->next is even
+    for (Node *cur = head; cur && cur->next; cur = cur->next) {
+      // 1st way
+      // delete_and_link(cur->next);
+      // --->
+
+      // 2nd way
+      // Node *toDelete = cur->next;
+      // link(toDelete->prev, toDelete->next);
+      // delete_node(toDelete);
+      // --->
+
+      // 3rd way
+      // why not working when replacing 'cur->next' with 'toDelete'?
+      Node *toDelete = cur->next;
+      Node *before = toDelete->prev;
+      Node *after = toDelete->next;
+
+      if (before)
+        before->next = after;
+      if (after)
+        after->prev = before;
+
+      delete_node(toDelete);
+      // --->
+
+      if (!cur->next)
+        tail = cur; // in even length, the tail will change
+    }
+    debug_verify_data_integrity();
+  }
