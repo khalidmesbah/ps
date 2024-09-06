@@ -9,6 +9,15 @@
     return nullptr;
   }
 
+  Node *get_nth(int n) { // O(n) time - O(1) memory
+    int cnt = 0;
+    for (Node *cur = head; cur; cur = cur->next)
+      if (++cnt == n)
+        return cur;
+
+    return nullptr; // still more steps needed - NOT found
+  }
+
   Node *get_nth(int n) {
     for (Node *cur = head; cur; cur = cur->next)
       if (n-- == 1)

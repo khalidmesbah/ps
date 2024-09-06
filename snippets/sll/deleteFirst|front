@@ -4,15 +4,26 @@
       // Move to next in the list
       //  and remove current
       Node *cur = head;
-
       head = head->next;
-
       delete_node(cur);
 
       if (!head) // data integrity!
         tail = nullptr;
       debug_verify_data_integrity();
     }
+  }
+
+  void delete_first() {
+    if (!head)
+      return;
+
+    Node *cur = head;
+    head = head->next;
+    delete_node(cur);
+
+    if (!head) // data integrity!
+      tail = nullptr;
+    debug_verify_data_integrity();
   }
 
   void delete_first() {
@@ -41,3 +52,15 @@
     debug_verify_data_integrity();
   }
 
+  void delete_first() {
+    if (!head)
+      return;
+
+    Node *new_head = head->next;
+    delete_node(head);
+    head = new_head;
+
+    if (!head) // data integrity!
+      tail = nullptr;
+    debug_verify_data_integrity();
+  }

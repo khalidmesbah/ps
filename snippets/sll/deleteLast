@@ -1,5 +1,16 @@
 
   void delete_last() {
+    for (Node *cur = head; cur && cur->next; cur = cur->next) {
+      if (cur->next == tail) {
+        delete_node(cur->next);
+        cur->next = nullptr;
+        tail = cur;
+        break;
+      }
+    }
+  }
+
+  void delete_last() {
     if (length <= 1) {
       delete_first();
       return;
@@ -7,7 +18,7 @@
     // Get the node before tail: its order is length-1 node
     Node *previous = get_nth(length - 1);
 
-   delete_node(tail);
+    delete_node(tail);
     tail = previous;
     tail->next = nullptr;
 

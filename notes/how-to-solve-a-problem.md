@@ -9,6 +9,7 @@
 - choose the best solution
   - think modular
   - use clear names
+  - follows the KISS principle
 - try to solve the question
 - couldn't figure out the solution after **_30m_**, Stop It, Get Some Help.
 - search for tips and look at tags
@@ -22,3 +23,4 @@
 ## Notes
 
 - the problem doesn't need to take more than 1h
+- KISS

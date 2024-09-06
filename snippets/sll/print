@@ -1,0 +1,15 @@
+
+  void print() {
+    for (Node *cur = head; cur; cur = cur->next)
+      cout << cur->data << " ";
+    cout << "\n";
+  }
+  
+  void print() {
+    Node *node = head;
+    while (node) {
+      cout << node->data << " ";
+      node = node->next;
+    }
+    cout << "\n";
+  }
