@@ -1,0 +1,29 @@
+
+  typedef Node *N;
+  void swap_kth(int k) {
+    if (k > length)
+      return;
+    int kb = length - k + 1;
+
+    if (k == kb)
+      return;
+
+    N x = get_nth(k), px = x->prev, nx = x->next;
+    N y = get_nth(kb), py = y->prev, ny = y->next;
+
+    if (k + 1 == kb) {
+      link(px, y);
+      link(y, x);
+      link(x, ny);
+    } else {
+      link(px, y);
+      link(y, nx);
+
+      link(py, x);
+      link(x, ny);
+    }
+
+    if (k == 1) {
+      swap(head, tail);
+    }
+  }

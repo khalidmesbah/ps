@@ -1,0 +1,56 @@
+
+  int middle_value1() { // iterate from both directions same time
+    assert(head);
+
+    Node *h = head, *t = tail;
+
+    while (h != t && h->next != t)
+      h = h->next, t = t->prev;
+    return t->data;
+  }
+
+  int middle_value2() {
+    /*
+     * The idea is simple but smart!
+     * use 2 pointers
+     * The first (slow) moves normally step by step
+     * The second (fast) jump 2 steps each time!
+     * If the list has e.g. 10 elements
+     * When the slow in the middle (e.g. 5), the fast is at the double (10)
+     * From that we know we found the middle.
+     */
+    assert(head);
+
+    Node *slow = head, *fast = head;
+
+    while (fast && fast->next) {
+      fast = fast->next->next; // Hare: jump 2 steps
+      slow = slow->next;       // Tortoise
+    }
+    return slow->data;
+
+    // based on The Tortoise and the Hare Algorithm
+  }
+
+  int middle_value1() {
+    while (head && tail) {
+      if (head == tail)
+        return tail->data;
+      if (head->next == tail)
+        return tail->data;
+
+      head = head->next;
+      tail = tail->prev;
+    }
+
+    return 0;
+  }
+
+  int middle_value1() {
+    while (head != tail && head->next != tail) {
+      head = head->next;
+      tail = tail->prev;
+    }
+
+    return tail->data;
+  }
