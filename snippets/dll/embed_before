@@ -1,0 +1,11 @@
+
+  void embed_before(Node *cur, int value) {
+    Node *node_before = cur->prev;
+    Node *middle = new Node(value);
+
+    link(node_before, middle);
+    link(middle, cur);
+
+    add_node(middle);
+    debug_verify_data_integrity();
+  }

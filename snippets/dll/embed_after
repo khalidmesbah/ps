@@ -1,27 +1,12 @@
 
   void embed_after(Node *node_before, int value) {
     // Add a node with value between node and its next
-    Node *middle = new Node(value);
-    ++length;
-    debug_add_node(middle);
-
     Node *node_after = node_before->next;
+    Node *middle = new Node(value);
+
     link(node_before, middle);
     link(middle, node_after);
-  }
 
-
-  void embed_after(Node *node_before, int value) {
-    Node *node_after = node_before->next;
-    Node *middle = new Node(value);
-
-    node_before->next = middle;
-    middle->prev = node_before;
-    middle->next = node_after;
-    node_after->prev = middle;
-
-    length++;
-
-    debug_add_node(middle);
+    add_node(middle);
     debug_verify_data_integrity();
   }

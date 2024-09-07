@@ -1,17 +1,19 @@
+  void reverse() {
+    if (!head || !head->next) // length <=1
+      return;
 
-	void reverse() {
-		if (length <= 1)
-			return;
+    Node *f = head, *s = head->next;
+    Node *f_ = nullptr, *s_ = nullptr;
 
-		Node* first = head, *second = head->next;
-		while (second) {
-			// Take copy of next move data
-			Node* first_ = second, *second_ = second->next;
-			link(second, first);				// reverse
-			first = first_, second = second_;	// move
-		}
-		swap(head, tail);
-		head->prev = tail->next = nullptr;
+    while (s) {
+      f_ = s, s_ = s->next;
+      link(s, f);
+      f = f_, s = s_;
+    }
+    swap(head, tail);
 
-		debug_verify_data_integrity();
-	}
+    head->prev = tail->next = nullptr;
+
+    debug_verify_data_integrity();
+  }
+

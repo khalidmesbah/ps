@@ -1,0 +1,71 @@
+
+
+  void delete_nth_node(int n) {
+    if (!head || n < 1 || n > length) { // delete nothing
+      cout << "Error. No such nth node\n";
+      return;
+    } else if (n == 1) { // delete first
+      Node *toDelete = head;
+      !head->next ? head = tail = nullptr : head = head->next;
+      delete_node(toDelete);
+    } else if (n == length) { // delete last
+      Node *prv = head;
+      while (prv->next->next)
+        prv = prv->next;
+
+      delete_node(tail);
+      tail = prv;
+      tail->next = nullptr;
+    } else { // delete middle
+      Node *before_nth = head;
+      int cnt = 2;
+      for (Node *cur = head->next; cur; cur = cur->next)
+        if (++cnt == n)
+          before_nth = cur;
+
+      Node *nth = before_nth->next;
+      before_nth->next = nth->next;
+
+      delete_node(nth);
+    }
+    debug_verify_data_integrity();
+  }
+
+	void delete_nth_node(int n) {
+		if (n < 1 || n > length)
+			cout << "Error. No such nth node\n";
+		else if (n == 1)
+			delete_first();
+		else {
+			
+			Node* before_nth = get_nth(n - 1);
+			Node* nth = before_nth->next;
+			bool is_tail = nth == tail;
+		
+			before_nth->next = nth->next;
+			if (is_tail)
+				tail = before_nth;
+
+			delete_node(nth);
+
+			debug_verify_data_integrity();
+		}
+	}
+
+  void delete_nth_node(int n) {
+    if (!head || n < 1 || n > length) { // delete nothing
+      cout << "Error. No such nth node\n";
+    } else if (n == 1) { // delete first
+      delete_first();
+    } else if (n == length) { // delete last
+      delete_last();
+    } else { // delete middle
+      Node *before_nth = get_nth(n - 1);
+
+      Node *nth = before_nth->next;
+      before_nth->next = nth->next;
+
+      delete_node(nth);
+      debug_verify_data_integrity();
+    }
+  }

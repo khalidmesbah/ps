@@ -6,3 +6,11 @@
     cout << "\n";
   }
 
+  void print_reversed() {
+    Node *cur = tail;
+    while (cur) {
+      cout << cur->data << " ";
+      cur = cur->prev;
+    }
+    cout << "\n";
+  }
