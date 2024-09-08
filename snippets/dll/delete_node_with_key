@@ -1,4 +1,27 @@
 
+  void delete_node_with_key(int value) {
+    if (!head)
+      return;
+    if (value == head->data) {
+      head = head->next;
+      delete_node(head->prev);
+      head->prev = nullptr;
+    } else if (tail->data == value) {
+      tail = tail->prev;
+      delete_node(tail->next);
+      tail->next = nullptr;
+    } else {
+      for (Node *cur = head; cur; cur = cur->next) {
+        if (value == cur->data) {
+          link(cur->prev, cur->next);
+          delete_node(cur);
+          break;
+        }
+      }
+    }
+    debug_verify_data_integrity();
+  }
+
 	void delete_node_with_key(int value) {
 		if (!length)
 			return;
@@ -54,3 +77,4 @@
 
     debug_verify_data_integrity();
   }
+
