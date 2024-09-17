@@ -1,0 +1,4 @@
+- the pointers are stored in the stack
+- all varaibles are stored in the stack except the ones created with `new` keyword
+- don't delete pointers whose value is in the stack
+- delete pointers whose value is in the heap
