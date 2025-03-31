@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"deba929ffe68b9c9","type":"text","text":"# greedy strategy\n-  a very simple problem-solving strategy.","x":-136,"y":-199,"width":414,"height":140},
+		{"id":"a46cfff23985b2b0","type":"file","file":"NP-complete problems.md","x":-420,"y":-820,"width":400,"height":400},
+		{"id":"53975cd28ff9324b","type":"text","text":"## greedy algo\n- Greedy algorithms optimize locally, hoping to end up with a global optimum.\n- In technical terms: at each step you pick the locally optimal solution, and in the end you’re left with the globally optimal solution\n- don’t always work\n- simple to write\n- Greedy algorithms are easy to write and fast to run, so they make good approximation algorithms.\n- sometimes, perfect is the enemy of good. Sometimes all you need is an algorithm that solves the problem pretty well. And that’s where greedy algorithms shine, because they’re simple to write and usually get pretty close.\n- greedy algo is called approximation algo\n- Approximation algorithms are judged by \n\t- How fast they are \n\t- How close they are to the optimal solution","x":720,"y":-272,"width":408,"height":538},
+		{"id":"3a2cd213860d9a90","type":"file","file":"set-covering problem.md","x":-420,"y":-1360,"width":400,"height":400},
+		{"id":"33f35d6f49922ec2","type":"file","file":"traveling-salesperson problem.md","x":71,"y":-1360,"width":400,"height":400},
+		{"id":"10ff9caa9574d1e7","type":"file","file":"knapsack problem.md","x":-914,"y":-1360,"width":400,"height":400},
+		{"id":"424cb990809dc878","type":"text","text":"## power set\n- every possible subset of a set\n- there are 2^n possible subsets for a set of size n","x":153,"y":241,"width":250,"height":323},
+		{"id":"8db01a3bf92b98e3","type":"text","text":"## Why?\n- to solve NP-complete problems","x":-880,"y":43,"width":304,"height":172},
+		{"id":"4d03facc3192be57","type":"text","text":"## approximation algo\n- it's used to find an approximate solution to an NP-complete problem quickly.\n- If you have an NP-complete problem, your best bet is to use an approximation algorithm.\n- all greedy algos are approximation algos but not vice versa","x":720,"y":-520,"width":374,"height":187}
+	],
+	"edges":[
+		{"id":"d0f6d0e38f4ebbcc","fromNode":"deba929ffe68b9c9","fromSide":"bottom","toNode":"53975cd28ff9324b","toSide":"left"},
+		{"id":"9d65f0a357b5c939","fromNode":"deba929ffe68b9c9","fromSide":"top","toNode":"a46cfff23985b2b0","toSide":"bottom"},
+		{"id":"89ad6ecf38a8dbb4","fromNode":"deba929ffe68b9c9","fromSide":"bottom","toNode":"424cb990809dc878","toSide":"top"},
+		{"id":"b487235a1dc048b0","fromNode":"deba929ffe68b9c9","fromSide":"left","toNode":"8db01a3bf92b98e3","toSide":"top"},
+		{"id":"eeb67299fa6c2f70","fromNode":"deba929ffe68b9c9","fromSide":"bottom","toNode":"4d03facc3192be57","toSide":"top"},
+		{"id":"c4e833b4e7a47a00","fromNode":"a46cfff23985b2b0","fromSide":"left","toNode":"10ff9caa9574d1e7","toSide":"right"},
+		{"id":"86a06ebf24e9d13e","fromNode":"a46cfff23985b2b0","fromSide":"top","toNode":"3a2cd213860d9a90","toSide":"bottom"},
+		{"id":"fc99f4fab276b35b","fromNode":"a46cfff23985b2b0","fromSide":"right","toNode":"33f35d6f49922ec2","toSide":"left"}
+	]
+}

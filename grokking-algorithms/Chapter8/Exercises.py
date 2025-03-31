@@ -6,7 +6,7 @@ All the boxes are of different sizes, and you're trying to maximize the space yo
 How would you pick boxes to maximize space?
 Come up with a greedy strategy. Will that give you the optimal solution?
 """
-# Answer: 
+# Answer:
 # A greedy strategy is to pick the largest box that can fit in the remaining space, and repeat it until no boxes can fit in anymore.
 # This might not give us an optimal solution.
 
@@ -29,12 +29,12 @@ Come up with a greedy strategy. Will that give you the optimal solution?
 # Exercise 8.4
 # Breadth-first search
 # Answer: Yes
-# Reason: it make locally optimal choices at each step by explores all the neighbor nodes before moving on to the next level of nodes
+# Reason: it makes locally optimal choices at each step by explores all the neighbor nodes before moving on to the next level of nodes
 
-# Exercise 8.5 
+# Exercise 8.5
 # Dijkstra's algorithm
 # Answer: Yes
-# Reason: it make locally optimal choices at each step by explores all the neighbor nodes before moving on to the next level of nodes
+# Reason: it makes locally optimal choices at each step by explores all the neighbor nodes before moving on to the next level of nodes
 
 # Exercise 8.6
 """
@@ -60,3 +60,4 @@ You have to find the minimum number of colours you need so that no two adjacent 
 Is this an NP-complete problem?
 """
 # Answer: Yes
+
