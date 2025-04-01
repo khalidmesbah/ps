@@ -1,0 +1,4 @@
+-  a hash that maps words to places where they appear. 
+	- ![[Pasted image 20250401170214.png]]![[Pasted image 20250401170234.png]]
+- it’s commonly used to build search engines. 
+- 

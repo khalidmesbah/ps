@@ -44,7 +44,7 @@
 		{
 			"id":"95e0b3a7e4458f86",
 			"styleAttributes":{},
-			"text":"## when?\n- you want optimize something giving a constraint\n- the problem can be broken into discrete sub-problems\n- ",
+			"text":"## when?\n- you want optimize/maximize something giving a constraint\n- the problem can be broken into discrete sub-problems\n- ",
 			"type":"text",
 			"x":-896,
 			"y":-800,

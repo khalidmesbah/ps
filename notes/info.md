@@ -1,3 +1,1 @@
-# Info
-
 - getting stuck is where you learn the most

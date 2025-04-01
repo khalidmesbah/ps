@@ -4,20 +4,52 @@
     "type": "split",
     "children": [
       {
-        "id": "6ce320c316f278cb",
+        "id": "c8c3ff03dbbdb7fc",
         "type": "tabs",
         "children": [
           {
-            "id": "b1eee9583711619a",
+            "id": "387b8df9cd0082ba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "tldraw-view",
+              "state": {
+                "file": "drawings/The classroom scheduling problem.md"
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "The classroom scheduling problem"
+            }
+          },
+          {
+            "id": "4f8e88fa487d3a37",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "drawings/Knapsack problem solution.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Knapsack problem solution"
+            }
+          },
+          {
+            "id": "76be95ee2a2bdc79",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "canvas/greedy algorithms.canvas",
+                "viewState": {
+                  "x": 89.11388913395342,
+                  "y": 55.55821156747547,
+                  "zoom": -0.20000000000000007
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "greedy algorithms"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,22 +101,13 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "78bacb8575b55057",
-            "type": "leaf",
-            "state": {
-              "type": "file-tree-view",
-              "state": {},
-              "icon": "sheets-in-box",
-              "title": "File Tree"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "658985b9dba0815f",
@@ -156,19 +179,9 @@
               "icon": "lucide-list",
               "title": "Outline of Untitled"
             }
-          },
-          {
-            "id": "8c8fc85810a0b1b2",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -187,60 +200,59 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-git:Open Git source control": false,
       "file-tree-alternative:File Tree Alternative Plugin": false,
-      "pdf-plus:PDF++: Toggle auto-copy": false,
-      "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "tldraw:Create new tldrawing": false
     }
   },
-  "active": "b1eee9583711619a",
+  "active": "76be95ee2a2bdc79",
   "lastOpenFiles": [
-    "math/Pythagorean formula.md",
-    "problems/longest common subsequence.md",
-    "levenshtein-distance.md",
-    "canvas/k-nearest neighbors.canvas",
-    "OCR.md",
-    "Naive Bayes classifier.md",
-    "attachments/Pasted image 20250401164202.png",
-    "attachments/Pasted image 20250401163505.png",
-    "attachments/Pasted image 20250401160245.png",
-    "canvas",
-    "attachments/Pasted image 20250401154014.png",
-    "attachments/Pasted image 20250401153956.png",
-    "attachments/Pasted Image 20250401110937_991.png",
-    "attachments/Pasted Image 20250401110207_520.png",
-    "attachments/Pasted Image 20250401105936_408.png",
-    "math",
-    "canvas/dynamic programming.canvas",
-    "Excalidraw/Drawing 2025-04-01 10.49.26.excalidraw.md",
-    "attachments/Pasted image 20250401103947.png",
-    "attachments/Pasted image 20250401103938.png",
-    "problems/longest common substring.md",
-    "Excalidraw/Drawing 2025-03-31 20.43.43.excalidraw.md",
-    "Excalidraw/Knapsack problem solution.md",
+    "drawings/The classroom scheduling problem.md",
+    "canvas/greedy algorithms.canvas",
+    "drawings/Knapsack problem solution.md",
+    "attachments/Pasted Image 20250401235227_023.png",
     "problems/knapsack problem.md",
-    "levenshtein-distance.md~",
-    "Levenshtein distance.md",
-    "Excalidraw/Scripts/Downloaded/Darken background color.md",
-    "advices.md",
-    "abstract-data-type.md",
-    "Untitled.md",
-    "problems/set-covering problem.md",
-    "resources.md",
-    "abstraction.md",
-    "types-of-data-structures.md",
-    "canvas/greedy algo.canvas",
-    "space-complexity.md",
-    "problems/traveling-salesperson problem.md",
-    "algorithms.md",
-    "problems",
     "linked-list.md",
-    "problem-solving-interview.md",
-    "recursion.md",
+    "drawings/test.md",
+    "attachments/11a25b84-f997-4ecd-917e-912070a2b547-tldrawFile.png",
+    "levenshtein-distance.md",
+    "Inverted indexes data structure.md",
+    "drawings/The Diffie-Hellman algorithm.md",
+    "HyperLogLog algorithm.md",
+    "math/Pythagorean formula.md",
+    "drawings/Longest common substring.md",
+    "drawings/SHAs.md",
+    "attachments/0048de81-cb17-4b5b-9d73-cac84bc06691-tldrawFile.png",
+    "attachments/d7dc715b-afea-4ed3-8c7a-8d6bedca30e3-tldrawFile.png",
+    "drawings/Tldraw 2025-04-01 8.48PM.md",
+    "drawings/Drawing 2025-04-01 20.48.05.excalidraw.md",
+    "drawings",
+    "Excalidraw/Drawing 2025-04-01 10.49.26.excalidraw.md",
+    "attachments/9c6b0627-81a2-47ea-984e-9989e1ccabfd-tldrawFile.png",
+    "attachments/Pasted image 20250401192413.png",
+    "attachments/Pasted Image 20250331033300_454.png",
+    "info.md",
+    "canvas/SHAs.md",
+    "tldraw",
+    "The Fourier transform.md",
+    "cpp.md",
+    "canvas/Tldraw 2025-04-01 8.26PM.md",
+    "canvas/Tldraw 2025-04-01 8.25PM.md",
+    "MapReduce algorithm.md",
+    "canvas/Linear programming.canvas",
+    "Excalidraw/Drawing 2025-04-01 19.53.17.excalidraw.md",
+    "Bloom filter data structure.md",
+    "canvas/dynamic programming.canvas",
+    "canvas/k-nearest neighbors.canvas",
+    "stl-sets.md",
+    "attachments/Pasted image 20250401192150.png",
+    "attachments/Pasted image 20250401170234.png",
+    "attachments/Pasted image 20250401170233.png",
+    "canvas",
+    "math",
+    "levenshtein-distance.md~",
+    "problems",
     "Excalidraw/Scripts/Downloaded",
     "Excalidraw/Scripts",
     "attachments/Recording 20250331034035.m4a",
-    "Excalidraw/attachments/attachments/Recording 20250331034027.m4a",
-    "Excalidraw/attachments/Recording 20250331033923.m4a",
-    "Excalidraw/attachments/attachments"
+    "Excalidraw/attachments/attachments/Recording 20250331034027.m4a"
   ]
 }

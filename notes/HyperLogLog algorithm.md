@@ -1,0 +1,3 @@
+- HyperLogLog approximates the number of unique elements in a set.
+- it won't give you an exact answer, but it comes very close and uses only a fraction of the memory a task like this would otherwise take.
+- 

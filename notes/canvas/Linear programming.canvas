@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"fd1c0f824a1f9b57","type":"text","text":"## when\n- you want to maximize something giving constraints\n- ","x":-301,"y":-518,"width":445,"height":224,"color":"2"},
+		{"id":"8662fe5289f65137","x":-896,"y":-204,"width":337,"height":56,"color":"2","type":"text","text":"## examples of problems"},
+		{"id":"f533d717ca965331","x":-1481,"y":-538,"width":428,"height":217,"color":"3","type":"text","text":"your company makes two products, shirts and totes. Shirts need 1 meter of fabric and 5 buttons. Totes need 2 meters of fabric and 2 buttons. You have 11 meters of fabric and 20 buttons. You make $2 per shirt and $3 per tote. How many shirts and totes should you make to maximize your profit?"},
+		{"id":"7e2e82658b7a4554","x":-1636,"y":-147,"width":541,"height":374,"color":"3","type":"text","text":"you’re a politician, and you want to maximize the number of votes you get. Your research has shown that it takes an average of an hour of work (marketing, research, and so on) for each vote from a San Franciscan or 1.5 hours/vote from a Chicagoan. You need at least 500 San Franciscans and at least 300 Chicagoans. You have 50 days. It also costs you $2/San Franciscan versus $1/Chicagoan. Your total budget is $1,500. What’s the maximum number of total votes you can get (San Francisco + Chicago)? Here you’re trying to maximize votes, and you’re constrained by time and money."},
+		{"id":"373a3f1fdde6e439","x":-78,"y":11,"width":482,"height":450,"color":"2","type":"text","text":"## info \n- All the graph algorithms can be done through linear programming instead\n- Linear programming is a much more general framework, and graph problems are a subset of that. I hope your mind is blown!\n- Linear programming uses the Simplex algorithm. It’s a complex algorithm, which is why I didn’t include it in this book. If you’re interested in optimization, look up linear programming!"},
+		{"id":"01ca571c48674a2f","type":"text","text":"# Linear programming","x":-363,"y":-147,"width":375,"height":64,"color":"1"}
+	],
+	"edges":[
+		{"id":"6a753b7dd443a209","fromNode":"01ca571c48674a2f","fromSide":"top","toNode":"fd1c0f824a1f9b57","toSide":"bottom"},
+		{"id":"92dd747bad77974c","fromNode":"01ca571c48674a2f","fromSide":"left","toNode":"8662fe5289f65137","toSide":"right"},
+		{"id":"282babcec8cff1b5","fromNode":"8662fe5289f65137","fromSide":"left","toNode":"f533d717ca965331","toSide":"right"},
+		{"id":"528bafa8da85098d","fromNode":"8662fe5289f65137","fromSide":"left","toNode":"7e2e82658b7a4554","toSide":"right"},
+		{"id":"d538162440401251","fromNode":"01ca571c48674a2f","fromSide":"bottom","toNode":"373a3f1fdde6e439","toSide":"top"}
+	]
+}

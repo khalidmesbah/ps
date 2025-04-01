@@ -1,0 +1,116 @@
+{
+	"edges":[
+		{"id":"d0f6d0e38f4ebbcc","fromNode":"deba929ffe68b9c9","fromSide":"bottom","toNode":"53975cd28ff9324b","toSide":"top"},
+		{"id":"9d65f0a357b5c939","fromNode":"deba929ffe68b9c9","fromSide":"top","toNode":"a46cfff23985b2b0","toSide":"bottom"},
+		{"id":"89ad6ecf38a8dbb4","fromNode":"deba929ffe68b9c9","fromSide":"bottom","toNode":"424cb990809dc878","toSide":"top"},
+		{"id":"b487235a1dc048b0","fromNode":"deba929ffe68b9c9","fromSide":"left","toNode":"8db01a3bf92b98e3","toSide":"top"},
+		{"id":"eeb67299fa6c2f70","fromNode":"deba929ffe68b9c9","fromSide":"bottom","toNode":"4d03facc3192be57","toSide":"top"},
+		{"id":"c4e833b4e7a47a00","fromNode":"a46cfff23985b2b0","fromSide":"left","toNode":"10ff9caa9574d1e7","toSide":"right"},
+		{"id":"86a06ebf24e9d13e","fromNode":"a46cfff23985b2b0","fromSide":"top","toNode":"3a2cd213860d9a90","toSide":"bottom"},
+		{"id":"fc99f4fab276b35b","fromNode":"a46cfff23985b2b0","fromSide":"right","toNode":"33f35d6f49922ec2","toSide":"left"},
+		{"id":"e67a222e6ab49f10","fromNode":"a46cfff23985b2b0","fromSide":"left","toNode":"e484c11219320827","toSide":"right"},
+		{"id":"d5b78454eeb47fd8","fromNode":"a46cfff23985b2b0","fromSide":"right","toNode":"73cddca4e6f59d03","toSide":"left"},
+		{"id":"c71029f4e4c4998b","fromNode":"53975cd28ff9324b","fromSide":"left","toNode":"be305bf739b5bb46","toSide":"right"},
+		{"id":"8a42441a158d5667","fromNode":"a46cfff23985b2b0","fromSide":"right","toNode":"583c40383c1dc293","toSide":"left"}
+	],
+	"nodes":[
+		{
+			"id":"deba929ffe68b9c9",
+			"styleAttributes":{},
+			"text":"# greedy strategy\n-  a very simple problem-solving strategy.",
+			"type":"text",
+			"x":-136,
+			"y":-199,
+			"width":414,
+			"height":140
+		},
+		{
+			"file":"NP-complete problems.md",
+			"id":"a46cfff23985b2b0",
+			"styleAttributes":{},
+			"type":"file",
+			"x":-420,
+			"y":-820,
+			"width":400,
+			"height":400
+		},
+		{
+			"file":"problems/set-covering problem.md",
+			"id":"3a2cd213860d9a90",
+			"styleAttributes":{},
+			"type":"file",
+			"x":-420,
+			"y":-1360,
+			"width":400,
+			"height":400
+		},
+		{
+			"file":"problems/traveling-salesperson problem.md",
+			"id":"33f35d6f49922ec2",
+			"styleAttributes":{},
+			"type":"file",
+			"x":71,
+			"y":-1360,
+			"width":400,
+			"height":400
+		},
+		{
+			"file":"problems/knapsack problem.md",
+			"id":"10ff9caa9574d1e7",
+			"styleAttributes":{},
+			"type":"file",
+			"x":-914,
+			"y":-1360,
+			"width":400,
+			"height":400
+		},
+		{
+			"id":"8db01a3bf92b98e3",
+			"styleAttributes":{
+				"border":null,
+				"shape":null,
+				"textAlign":null
+			},
+			"text":"## Why?\n- to solve NP-complete problems",
+			"type":"text",
+			"x":-890,
+			"y":-56,
+			"width":304,
+			"height":172
+		},
+		{"id":"73cddca4e6f59d03","type":"text","text":"## overview\n-> you have an NP-complete problem\n-> getting an exact solution to the problem is slow\n-> use an approximation algorithm to solve it quickly\n-> you get an approximate solution to the problem quickly","x":50,"y":-595,"width":493,"height":210},
+		{
+			"id":"424cb990809dc878",
+			"styleAttributes":{},
+			"text":"## power set\n- every possible subset of a set\n- there are 2^n possible subsets for a set of size n",
+			"type":"text",
+			"x":-834,
+			"y":210,
+			"width":250,
+			"height":323
+		},
+		{
+			"id":"4d03facc3192be57",
+			"styleAttributes":{},
+			"text":"## approximation algo\n- it's used to find an approximate solution to an NP-complete problem quickly.\n- If you have an NP-complete problem, your best bet is to use an approximation algorithm.\n- all greedy algos are approximation algos but not vice versa\n- Approximation algorithms are judged by \n\t- How fast they are \n\t- How close they are to the optimal solution",
+			"type":"text",
+			"x":699,
+			"y":159,
+			"width":447,
+			"height":537
+		},
+		{
+			"id":"53975cd28ff9324b",
+			"styleAttributes":{},
+			"text":"## greedy algo\n- Greedy algorithms optimize locally, hoping to end up with a global optimum.\n- In technical terms: at each step you pick the locally optimal solution, and in the end you’re left with the globally optimal solution\n- don’t always work (sometimes we find the global optimum [[The classroom scheduling problem]] and sometimes not [[Knapsack problem solution]])\n- sometimes, perfect is the enemy of good. Sometimes all you need is an algorithm that solves the problem pretty well. And that’s where greedy algorithms shine, because they’re simple to write and usually get pretty close.\n- greedy algo is called approximation algo\n- A greedy algorithm is simple: at each step, pick the optimal move\n",
+			"type":"text",
+			"x":-99,
+			"y":161,
+			"width":751,
+			"height":538
+		},
+		{"id":"be305bf739b5bb46","type":"text","text":"## pros of greedy algos\n- easy to write\n- run fast\n- gets to the optimal solution or pretty close to it","x":-519,"y":270,"width":331,"height":186},
+		{"id":"e484c11219320827","type":"text","text":"## why you should know how to identify them?\n- to avoid wasting time trying to find a fast algorithm for them\n- there’s no easy way to tell if the problem you’re working on is NP-complete. But there are some suggestions.\n\n## is NP-complete problem\n1. Your algorithm slows down with more items.\n2. The algo contains “All combinations of X” \n3. If your problem involves a sequence (such as a sequence of cities, like traveling salesperson), and it’s hard to solve, it might be NP-complete. \n4. If your problem involves a set (like a set of radio stations) and it’s hard to solve, it might be NP-complete. \n5. Can you restate your problem as the set-covering problem or the traveling-salesperson problem? Then your problem is definitely NP-complete. ","x":-1562,"y":-874,"width":646,"height":702},
+		{"id":"583c40383c1dc293","type":"file","file":"drawings/The classroom scheduling problem.md","x":668,"y":-1197,"width":862,"height":548}
+	]
+}
