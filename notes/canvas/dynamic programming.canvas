@@ -1,0 +1,77 @@
+{
+	"edges":[
+		{"id":"fa8a4e46d2608244","fromNode":"6e0b6e9dea8286ed","fromSide":"top","toNode":"fb763bd3cacd3c03","toSide":"bottom"},
+		{
+			"id":"c0e25391407ce2d1",
+			"styleAttributes":{},
+			"fromNode":"6e0b6e9dea8286ed",
+			"fromSide":"left",
+			"toNode":"95e0b3a7e4458f86",
+			"toSide":"right"
+		},
+		{"id":"a23b18e3e7053720","fromNode":"6e0b6e9dea8286ed","fromSide":"bottom","toNode":"f4dcd26ea66b1359","toSide":"top"},
+		{"id":"052662ee9b3df907","fromNode":"f4dcd26ea66b1359","fromSide":"right","toNode":"705829eb21cc7022","toSide":"left"},
+		{"id":"9f113d479afc03f7","fromNode":"705829eb21cc7022","fromSide":"right","toNode":"c40277723a4af516","toSide":"left"},
+		{"id":"b82a7e43e4b50c2d","fromNode":"6e0b6e9dea8286ed","fromSide":"right","toNode":"ff904ff89ae7acc8","toSide":"left"},
+		{"id":"bc62e79c807706d5","fromNode":"6e0b6e9dea8286ed","fromSide":"bottom","toNode":"268cfbfc4c2ca2fc","toSide":"right"},
+		{"id":"af0b9be88a208967","fromNode":"268cfbfc4c2ca2fc","fromSide":"top","toNode":"5edd5c3b4857bbf2","toSide":"right"},
+		{"id":"ff7818ecd8a71ec8","fromNode":"268cfbfc4c2ca2fc","fromSide":"bottom","toNode":"fe84fe45cc956795","toSide":"right"},
+		{"id":"95d795446e2e3d2b","fromNode":"268cfbfc4c2ca2fc","fromSide":"bottom","toNode":"5921cf90bad5dc06","toSide":"right"},
+		{"id":"925c296c4aa509c5","fromNode":"268cfbfc4c2ca2fc","fromSide":"top","toNode":"0faecf45b430473c","toSide":"right"}
+	],
+	"nodes":[
+		{
+			"id":"6e0b6e9dea8286ed",
+			"styleAttributes":{},
+			"text":"# Dynamic programming",
+			"type":"text",
+			"x":-243,
+			"y":-455,
+			"width":483,
+			"height":55,
+			"color":"1"
+		},
+		{
+			"id":"fb763bd3cacd3c03",
+			"styleAttributes":{},
+			"text":"## What\n- a technique to solve a hard problem by breaking it up into subproblems and solving those subproblems first.\n- dynamic programming starts with a small problem and builds up to the big problem\n-  Dynamic programming starts by solving subproblems and builds up to solving the big problem.\n\n",
+			"type":"text",
+			"x":-389,
+			"y":-1361,
+			"width":794,
+			"height":545
+		},
+		{
+			"id":"95e0b3a7e4458f86",
+			"styleAttributes":{},
+			"text":"## when?\n- you want optimize something giving a constraint\n- the problem can be broken into discrete sub-problems\n- ",
+			"type":"text",
+			"x":-896,
+			"y":-800,
+			"width":489,
+			"height":254
+		},
+		{"id":"ff904ff89ae7acc8","type":"text","text":"## real use cases\n\n- word wrap feature in editors\n- [[levenshtein-distance]]\n- `git diff`\n-  The longest common subsequence is being used to find\n\t- similarities in DNA strands. \n\t- a cure for multiple sclerosis","x":420,"y":-809,"width":752,"height":279},
+		{
+			"id":"f4dcd26ea66b1359",
+			"styleAttributes":{
+				"shape":null,
+				"textAlign":"center"
+			},
+			"text":"## DP solution/aglos\n- The grid starts out empty. You’re going to fill in each cell of the grid. Once the grid is filled in, you’ll have your answer to this problem!\n## how to come up with an algo\n- Every dynamic-programming solution involves a grid. \n- The values in the cells are usually what you’re trying to optimize. \n- Each cell is a subproblem, so think about how you can divide your problem into subproblems.\n- There’s no single formula for calculating a dynamic-programming solution.",
+			"type":"text",
+			"x":-183,
+			"y":-114,
+			"width":573,
+			"height":504,
+			"color":"4"
+		},
+		{"id":"0faecf45b430473c","type":"file","file":"problems/longest common subsequence.md","x":-1709,"y":-827,"width":400,"height":400,"color":"5"},
+		{"id":"5edd5c3b4857bbf2","type":"file","file":"problems/longest common substring.md","x":-1712,"y":-378,"width":400,"height":400,"color":"5"},
+		{"id":"5921cf90bad5dc06","type":"file","file":"problems/longest common subsequence.md","x":-1713,"y":70,"width":400,"height":400,"color":"5"},
+		{"id":"fe84fe45cc956795","type":"file","file":"problems/knapsack problem.md","x":-1710,"y":517,"width":400,"height":400,"color":"5"},
+		{"id":"705829eb21cc7022","type":"text","text":"### making the grid\nWhat does the grid for this problem look like? You need to answer these questions:\n- What are the values of the cells?\n- How do you divide this problem into subproblems?\n- What are the axes of the grid?","x":499,"y":-21,"width":525,"height":316,"color":"4"},
+		{"id":"c40277723a4af516","type":"text","text":"#### Filling in the grid\n-  there’s no easy way to calculate the formula here. You have to experiment and try to find something that works","x":1122,"y":48,"width":443,"height":181,"color":"4"},
+		{"id":"268cfbfc4c2ca2fc","type":"text","text":"# popular problems","x":-1083,"y":22,"width":368,"height":65,"color":"5"}
+	]
+}

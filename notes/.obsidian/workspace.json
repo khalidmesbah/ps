@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "c47b9c5191871793",
+        "id": "6ce320c316f278cb",
         "type": "tabs",
         "children": [
           {
-            "id": "ff6b4acbf29f367e",
+            "id": "b1eee9583711619a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "algorithms.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "algorithms"
+              "title": "New tab"
             }
           }
         ]
@@ -72,6 +68,16 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "78bacb8575b55057",
+            "type": "leaf",
+            "state": {
+              "type": "file-tree-view",
+              "state": {},
+              "icon": "sheets-in-box",
+              "title": "File Tree"
             }
           }
         ]
@@ -150,12 +156,23 @@
               "icon": "lucide-list",
               "title": "Outline of Untitled"
             }
+          },
+          {
+            "id": "8c8fc85810a0b1b2",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -167,50 +184,63 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false,
+      "file-tree-alternative:File Tree Alternative Plugin": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ff6b4acbf29f367e",
+  "active": "b1eee9583711619a",
   "lastOpenFiles": [
-    "knapsack problem.md",
-    "linked-list.md",
+    "math/Pythagorean formula.md",
+    "problems/longest common subsequence.md",
+    "levenshtein-distance.md",
+    "canvas/k-nearest neighbors.canvas",
+    "OCR.md",
+    "Naive Bayes classifier.md",
+    "attachments/Pasted image 20250401164202.png",
+    "attachments/Pasted image 20250401163505.png",
+    "attachments/Pasted image 20250401160245.png",
+    "canvas",
+    "attachments/Pasted image 20250401154014.png",
+    "attachments/Pasted image 20250401153956.png",
+    "attachments/Pasted Image 20250401110937_991.png",
+    "attachments/Pasted Image 20250401110207_520.png",
+    "attachments/Pasted Image 20250401105936_408.png",
+    "math",
+    "canvas/dynamic programming.canvas",
+    "Excalidraw/Drawing 2025-04-01 10.49.26.excalidraw.md",
+    "attachments/Pasted image 20250401103947.png",
+    "attachments/Pasted image 20250401103938.png",
+    "problems/longest common substring.md",
+    "Excalidraw/Drawing 2025-03-31 20.43.43.excalidraw.md",
+    "Excalidraw/Knapsack problem solution.md",
+    "problems/knapsack problem.md",
+    "levenshtein-distance.md~",
+    "Levenshtein distance.md",
+    "Excalidraw/Scripts/Downloaded/Darken background color.md",
+    "advices.md",
+    "abstract-data-type.md",
+    "Untitled.md",
+    "problems/set-covering problem.md",
+    "resources.md",
     "abstraction.md",
+    "types-of-data-structures.md",
+    "canvas/greedy algo.canvas",
+    "space-complexity.md",
+    "problems/traveling-salesperson problem.md",
+    "algorithms.md",
+    "problems",
+    "linked-list.md",
     "problem-solving-interview.md",
     "recursion.md",
-    "types-of-data-structures.md",
-    "resources.md",
-    "attachments/Pasted Image 20250331033300_483.png",
-    "advices.md",
-    "algorithms.md",
-    "cpp.md",
-    "stl-sets.md",
-    "patterns.md",
-    "pointers.md",
-    "attachments/Pasted Image 20250331033300_454.png",
-    "attachments/Pasted Image 20250331033300_478.png",
-    "Excalidraw/Knapsack problem solution.md",
-    "Excalidraw/Scripts/Downloaded/Darken background color.md",
-    "Excalidraw/Scripts/Downloaded/Darken background color.svg",
-    "traveling-salesperson problem.md",
-    "Untitled.md",
-    "Excalidraw/Drawing 2025-03-31 03.47.55.excalidraw.md",
-    "Excalidraw/Drawing 2025-03-31 03.47.14.excalidraw.md",
     "Excalidraw/Scripts/Downloaded",
     "Excalidraw/Scripts",
-    "Untitled.canvas",
-    "dynamic programming.canvas",
-    "set-covering problem.md",
-    "NP-complete problems.md",
     "attachments/Recording 20250331034035.m4a",
-    "attachments/Pasted image 20250331033941.png",
     "Excalidraw/attachments/attachments/Recording 20250331034027.m4a",
     "Excalidraw/attachments/Recording 20250331033923.m4a",
-    "Excalidraw/attachments/attachments",
-    "attachments",
-    "greedy algo.canvas",
-    "Excalidraw/attachments",
-    "Recording 20250331033731.m4a",
-    "Recording 20250331033754.m4a",
-    "Welcome.md"
+    "Excalidraw/attachments/attachments"
   ]
 }

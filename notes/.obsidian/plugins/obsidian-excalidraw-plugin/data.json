@@ -110,8 +110,15 @@
   "mdFontColor": "Black",
   "mdBorderColor": "Black",
   "mdCSS": "",
-  "scriptEngineSettings": {},
-  "defaultTrayMode": true,
+  "scriptEngineSettings": {
+    "Downloaded/Darken background color": {
+      "Step size": {
+        "value": 2,
+        "description": "Step size in percentage for making the color darker"
+      }
+    }
+  },
+  "defaultTrayMode": false,
   "previousRelease": "2.9.2",
   "showReleaseNotes": true,
   "showNewVersionNotification": true,

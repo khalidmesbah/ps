@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"0859ede929fa86ef","type":"text","text":"# k-nearest neighbors","x":-125,"y":-30,"width":358,"height":71},
+		{"id":"2e209d24baa4ea31","type":"text","text":"## classification\n- Classification = categorization into a group.\n\n### classification system\n- ","x":-856,"y":-73,"width":342,"height":211},
+		{"id":"7b75e4aa2fae7bb2","type":"text","text":"## regression\n- You learn about regression: predicting a number, like the value of a stock tomorrow, or how much a user will enjoy a movie.\n- Regression = predicting a response (like a number).\n- ![[Pasted image 20250401160245.png]]\n- ","x":-788,"y":249,"width":405,"height":270},
+		{"id":"c26d48fdc5ef49c2","type":"text","text":"## feature extraction\n\n- converting an item (like a fruit or a user) into a list of numbers that can be compared.\n![[Pasted image 20250401153956.png]]![[Pasted image 20250401154014.png]]","x":-105,"y":315,"width":350,"height":405},
+		{"id":"f2d679d487be7280","type":"text","text":"## k-nearest neighbors algo\n- You learn about the use cases and limitations of k-nearest neighbors.\n- usually called (KNN)\n-  These are the two basic things you’ll do with KNN\n\t- classification: categorization into a group\n\t- regression: predicting a response (like a number)\n- Picking good features is an important part of a successful KNN algorithm.\n- KNN is used for classification and regression and involves looking at the k-nearest neighbors.","x":-194,"y":-667,"width":435,"height":474},
+		{"id":"4184377890004f62","type":"text","text":"## cosine similarity\n- Cosine similarity doesn’t measure the distance between two vectors. Instead, it compares the angles of the two vectors. It’s better at dealing with cases like this. Cosine similarity is out of the scope of this book, but look it up if you use KNN!\n- a replacement for the distance formula","x":540,"y":-94,"width":675,"height":346},
+		{"id":"d73c1ab0e4562a7f","type":"text","text":"## use cases\n- classification\n- regression","x":-726,"y":-608,"width":250,"height":240},
+		{"id":"a93daf810226f23d","type":"text","text":"## limitations\n- ","x":-1289,"y":-603,"width":397,"height":312},
+		{"id":"bb9a559286b07a5d","type":"text","text":"## movie recommendation system\n1. make users rate categories of movies\n2. extract the features of users (convert users into a set of ratings)\n3. suggests a movie for a user A based on the ratings of the k-nearest neighbors of the user","x":-1417,"y":-165,"width":425,"height":391},
+		{"id":"1186167c64141293","type":"text","text":"### the right features\n- When you’re working with KNN, it’s really important to pick the right features to compare against. Picking the right features means \n\t- Features that directly correlate to the movies you’re trying to recommend \n\t- Features that don’t have a bias (for example, if you ask the users to only rate comedy movies, that doesn’t tell you whether they like action movies)\n- There’s no one right answer when it comes to picking good features. You have to think about all the different things you need to consider.","x":417,"y":-665,"width":508,"height":413},
+		{"id":"1ae0abad1544fc37","x":-425,"y":-1137,"width":490,"height":241,"type":"text","text":"### how to choose a good k\n- A good rule of thumb is, if you have N users, you should look at sqrt(N) neighbors.\n- if you have `N` items => `k=sqrt(N)`"}
+	],
+	"edges":[
+		{"id":"41266dfee5b6ada9","fromNode":"0859ede929fa86ef","fromSide":"left","toNode":"2e209d24baa4ea31","toSide":"right"},
+		{"id":"8e87e54958bf603a","fromNode":"0859ede929fa86ef","fromSide":"bottom","toNode":"c26d48fdc5ef49c2","toSide":"top"},
+		{"id":"f0400c16b2689802","fromNode":"0859ede929fa86ef","fromSide":"left","toNode":"7b75e4aa2fae7bb2","toSide":"right"},
+		{"id":"32d7950df3fba634","fromNode":"0859ede929fa86ef","fromSide":"top","toNode":"f2d679d487be7280","toSide":"bottom"},
+		{"id":"3d3707b53836c18e","fromNode":"0859ede929fa86ef","fromSide":"right","toNode":"4184377890004f62","toSide":"left"},
+		{"id":"b4cc959f951e4a7c","fromNode":"0859ede929fa86ef","fromSide":"top","toNode":"d73c1ab0e4562a7f","toSide":"bottom"},
+		{"id":"af1fe3ee882a2b93","fromNode":"0859ede929fa86ef","fromSide":"top","toNode":"a93daf810226f23d","toSide":"bottom"},
+		{"id":"c348ae66a0b6996f","fromNode":"0859ede929fa86ef","fromSide":"left","toNode":"bb9a559286b07a5d","toSide":"right"},
+		{"id":"3e73cf54f9991621","fromNode":"f2d679d487be7280","fromSide":"right","toNode":"1186167c64141293","toSide":"left"},
+		{"id":"702601d2fb1ac70e","fromNode":"f2d679d487be7280","fromSide":"top","toNode":"1ae0abad1544fc37","toSide":"bottom"}
+	]
+}

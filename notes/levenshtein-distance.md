@@ -1,0 +1,2 @@
+- Levenshtein distance measures how similar two strings are, and it uses dynamic programming.
+- Levenshtein distance is used for everything from spell-check to figuring out whether a user is uploading copyrighted data.
