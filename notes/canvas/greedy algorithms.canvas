@@ -102,7 +102,7 @@
 		{
 			"id":"53975cd28ff9324b",
 			"styleAttributes":{},
-			"text":"## greedy algo\n- Greedy algorithms optimize locally, hoping to end up with a global optimum.\n- In technical terms: at each step you pick the locally optimal solution, and in the end you’re left with the globally optimal solution\n- don’t always work (sometimes we find the global optimum [[The classroom scheduling problem]] and sometimes not [[Knapsack problem solution]])\n- sometimes, perfect is the enemy of good. Sometimes all you need is an algorithm that solves the problem pretty well. And that’s where greedy algorithms shine, because they’re simple to write and usually get pretty close.\n- greedy algo is called approximation algo\n- A greedy algorithm is simple: at each step, pick the optimal move\n",
+			"text":"## greedy algo\n- Greedy algorithms optimize locally, hoping to end up with a global optimum.\n- In technical terms: at each step you pick the locally optimal solution, and in the end you’re left with the globally optimal solution\n- don’t always work (sometimes we find the global optimum [[The classroom scheduling problem]] and sometimes not [[Knapsack problem]])\n- sometimes, perfect is the enemy of good. Sometimes all you need is an algorithm that solves the problem pretty well. And that’s where greedy algorithms shine, because they’re simple to write and usually get pretty close.\n- greedy algo is called approximation algo\n- A greedy algorithm is simple: at each step, pick the optimal move\n",
 			"type":"text",
 			"x":-99,
 			"y":161,
@@ -111,6 +111,6 @@
 		},
 		{"id":"be305bf739b5bb46","type":"text","text":"## pros of greedy algos\n- easy to write\n- run fast\n- gets to the optimal solution or pretty close to it","x":-519,"y":270,"width":331,"height":186},
 		{"id":"e484c11219320827","type":"text","text":"## why you should know how to identify them?\n- to avoid wasting time trying to find a fast algorithm for them\n- there’s no easy way to tell if the problem you’re working on is NP-complete. But there are some suggestions.\n\n## is NP-complete problem\n1. Your algorithm slows down with more items.\n2. The algo contains “All combinations of X” \n3. If your problem involves a sequence (such as a sequence of cities, like traveling salesperson), and it’s hard to solve, it might be NP-complete. \n4. If your problem involves a set (like a set of radio stations) and it’s hard to solve, it might be NP-complete. \n5. Can you restate your problem as the set-covering problem or the traveling-salesperson problem? Then your problem is definitely NP-complete. ","x":-1562,"y":-874,"width":646,"height":702},
-		{"id":"583c40383c1dc293","type":"file","file":"drawings/The classroom scheduling problem.md","x":668,"y":-1197,"width":862,"height":548}
+		{"id":"583c40383c1dc293","type":"file","file":"problems/The classroom scheduling problem.md","x":668,"y":-1197,"width":862,"height":548}
 	]
 }

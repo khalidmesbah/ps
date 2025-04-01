@@ -7,8 +7,8 @@
   "fileDestinations": {
     "confirmDestination": false,
     "assetsFolder": "tldraw/assets",
-    "destinationMethod": "default-folder",
-    "defaultFolder": "drawings",
+    "destinationMethod": "colocate",
+    "defaultFolder": "",
     "colocationSubfolder": ""
   },
   "saveFileDelay": 0.5,
