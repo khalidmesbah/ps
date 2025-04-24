@@ -10,7 +10,7 @@
 ## types of binary search trees
 - balanced
 - imbalanced
-## red-black tree
+## red-black trees
 - it is one of the special binary search trees that balance themselves.
 
 ##  B-trees

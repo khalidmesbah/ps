@@ -1,0 +1,2 @@
+- the transition function
+- a function that allows you to transition from one sub-problem to the other sub-problem

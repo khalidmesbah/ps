@@ -75,21 +75,6 @@ tags: [tldraw]
 				"typeName": "pointer"
 			},
 			{
-				"id": "asset:2080543422",
-				"type": "image",
-				"typeName": "asset",
-				"props": {
-					"name": "tldrawFile",
-					"src": "asset:obsidian.blockref.35e137c0-b15d-4b3a-b992-f0c3fe001dad",
-					"w": 385,
-					"h": 43,
-					"fileSize": 6789,
-					"mimeType": "image/png",
-					"isAnimated": false
-				},
-				"meta": {}
-			},
-			{
 				"x": 60.6875,
 				"y": 312.578125,
 				"rotation": 0,
@@ -201,36 +186,6 @@ tags: [tldraw]
 				"parentId": "shape:WAfipV2qgtj5CAtsBPIld",
 				"index": "a1",
 				"typeName": "shape"
-			},
-			{
-				"id": "asset:1522228095",
-				"type": "image",
-				"typeName": "asset",
-				"props": {
-					"name": "tldrawFile",
-					"src": "asset:obsidian.blockref.6ca49f56-7f16-48c4-9284-cb77c5d8f7f3",
-					"w": 530,
-					"h": 66,
-					"fileSize": 26687,
-					"mimeType": "image/png",
-					"isAnimated": false
-				},
-				"meta": {}
-			},
-			{
-				"id": "asset:288463085",
-				"type": "image",
-				"typeName": "asset",
-				"props": {
-					"name": "tldrawFile",
-					"src": "asset:obsidian.blockref.cdc581e5-d6fe-4d7c-997a-166d9cf04c18",
-					"w": 596,
-					"h": 145,
-					"fileSize": 51660,
-					"mimeType": "image/png",
-					"isAnimated": false
-				},
-				"meta": {}
 			},
 			{
 				"x": 403.82314596881565,
@@ -3744,21 +3699,6 @@ tags: [tldraw]
 				"parentId": "page:page",
 				"index": "aI9L5",
 				"typeName": "shape"
-			},
-			{
-				"id": "asset:2074857364",
-				"type": "image",
-				"typeName": "asset",
-				"props": {
-					"name": "tldrawFile",
-					"src": "asset:obsidian.blockref.58fb9bba-284c-4471-ab3b-fb7f710622dc",
-					"w": 541,
-					"h": 523,
-					"fileSize": 187491,
-					"mimeType": "image/png",
-					"isAnimated": false
-				},
-				"meta": {}
 			},
 			{
 				"x": 514.7568353753821,

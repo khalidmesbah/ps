@@ -1,0 +1,54 @@
+{
+  "logoType": "default",
+  "logo": {
+    "lucideIcon": "",
+    "imagePath": "",
+    "imageLink": ""
+  },
+  "logoScale": 1.2,
+  "iconColorType": "default",
+  "wordmark": "Obsidian",
+  "customFont": "interfaceFont",
+  "fontSize": "4em",
+  "fontColorType": "default",
+  "fontWeight": 600,
+  "maxResults": 5,
+  "showbookmarkedFiles": true,
+  "showRecentFiles": false,
+  "maxRecentFiles": 5,
+  "storeRecentFile": true,
+  "showPath": true,
+  "selectionHighlight": "default",
+  "showShortcuts": true,
+  "markdownOnly": false,
+  "unresolvedLinks": false,
+  "recentFilesStore": [
+    {
+      "filepath": "Untitled.canvas",
+      "timestamp": 1745523691457
+    },
+    {
+      "filepath": "canvas/dynamic programming.canvas",
+      "timestamp": 1745523644357
+    },
+    {
+      "filepath": "memoization.md",
+      "timestamp": 1745523599111
+    },
+    {
+      "filepath": "objective-function.md",
+      "timestamp": 1745523598826
+    },
+    {
+      "filepath": "test.md",
+      "timestamp": 1745523596711
+    }
+  ],
+  "bookmarkedFileStore": [],
+  "searchDelay": 0,
+  "replaceNewTabs": true,
+  "newTabOnStart": false,
+  "closePreviousSessionTabs": false,
+  "omnisearch": false,
+  "showOmnisearchExcerpt": true
+}

@@ -1,0 +1,2 @@
+- caching the result of a computation, so that we can use it later
+- we optimize the time complexity by giving up space complexity

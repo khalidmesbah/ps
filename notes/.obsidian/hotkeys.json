@@ -1,4 +1,30 @@
 {
   "graph:open": [],
-  "editor:delete-paragraph": []
+  "editor:delete-paragraph": [],
+  "switcher:open": [],
+  "omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "O"
+    }
+  ],
+  "editor:open-search": [],
+  "vimium:show-markers": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "F"
+    }
+  ],
+  "workspace:close": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
+    }
+  ]
 }

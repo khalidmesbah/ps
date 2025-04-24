@@ -17,7 +17,12 @@
 		{"id":"af0b9be88a208967","fromNode":"268cfbfc4c2ca2fc","fromSide":"top","toNode":"5edd5c3b4857bbf2","toSide":"right"},
 		{"id":"ff7818ecd8a71ec8","fromNode":"268cfbfc4c2ca2fc","fromSide":"bottom","toNode":"fe84fe45cc956795","toSide":"right"},
 		{"id":"95d795446e2e3d2b","fromNode":"268cfbfc4c2ca2fc","fromSide":"bottom","toNode":"5921cf90bad5dc06","toSide":"right"},
-		{"id":"925c296c4aa509c5","fromNode":"268cfbfc4c2ca2fc","fromSide":"top","toNode":"0faecf45b430473c","toSide":"right"}
+		{"id":"925c296c4aa509c5","fromNode":"268cfbfc4c2ca2fc","fromSide":"top","toNode":"0faecf45b430473c","toSide":"right"},
+		{"id":"50265cdd689a00b2","fromNode":"6e0b6e9dea8286ed","fromSide":"right","toNode":"0eae98d1f333b80f","toSide":"left"},
+		{"id":"f453b9758770c443","fromNode":"95e0b3a7e4458f86","fromSide":"top","toNode":"e8a29872560e8ef8","toSide":"bottom"},
+		{"id":"77136524f52cf04b","fromNode":"6e0b6e9dea8286ed","fromSide":"right","toNode":"b731b0a5c6d04eea","toSide":"left"},
+		{"id":"30380e1ba0e72f56","fromNode":"6e0b6e9dea8286ed","fromSide":"top","toNode":"c327e2645d15d652","toSide":"bottom"},
+		{"id":"48d4e2ffc2cdfe56","fromNode":"6e0b6e9dea8286ed","fromSide":"left","toNode":"df2b332092468b1d","toSide":"right"}
 	],
 	"nodes":[
 		{
@@ -34,24 +39,14 @@
 		{
 			"id":"fb763bd3cacd3c03",
 			"styleAttributes":{},
-			"text":"## What\n- a technique to solve a hard problem by breaking it up into subproblems and solving those subproblems first.\n- dynamic programming starts with a small problem and builds up to the big problem\n-  Dynamic programming starts by solving subproblems and builds up to solving the big problem.\n\n",
+			"text":"## What\n- a technique to solve a hard problem by breaking it up into subproblems and solving those subproblems first.\n- a technique to solve a certain type of problems \n- not all problems can be solved using DP, only problems with certain properties can be solved in a certain way\n- an optimization technique, \n- it's a method to optimize the solution to a problem (optimize from exponential time to polynomial time)\n- algorithmic technique to solve combinatoric and optimization problems utilizing the fact that the optimal solution to the problem depends on the optimal solution of its overlapping subproblems \n",
 			"type":"text",
 			"x":-389,
 			"y":-1361,
 			"width":794,
 			"height":545
 		},
-		{
-			"id":"95e0b3a7e4458f86",
-			"styleAttributes":{},
-			"text":"## when?\n- you want optimize/maximize something giving a constraint\n- the problem can be broken into discrete sub-problems\n- ",
-			"type":"text",
-			"x":-896,
-			"y":-800,
-			"width":489,
-			"height":254
-		},
-		{"id":"ff904ff89ae7acc8","type":"text","text":"## real use cases\n\n- word wrap feature in editors\n- [[levenshtein-distance]]\n- `git diff`\n-  The longest common subsequence is being used to find\n\t- similarities in DNA strands. \n\t- a cure for multiple sclerosis","x":420,"y":-809,"width":752,"height":279},
+		{"id":"ff904ff89ae7acc8","type":"text","text":"## real use cases\n\n- word wrap feature in editors\n- [[levenshtein-distance]]\n- `git diff`\n-  The longest common subsequence is being used to find\n\t- similarities in DNA strands. \n\t- a cure for multiple sclerosis\n- used in math, bioinformatics, game theory, economy, statistics, CS, linguistics","x":420,"y":-809,"width":752,"height":279},
 		{
 			"id":"f4dcd26ea66b1359",
 			"styleAttributes":{
@@ -69,9 +64,27 @@
 		{"id":"0faecf45b430473c","type":"file","file":"problems/longest common subsequence.md","x":-1709,"y":-827,"width":400,"height":400,"color":"5"},
 		{"id":"5edd5c3b4857bbf2","type":"file","file":"problems/longest common substring.md","x":-1712,"y":-378,"width":400,"height":400,"color":"5"},
 		{"id":"5921cf90bad5dc06","type":"file","file":"problems/longest common subsequence.md","x":-1713,"y":70,"width":400,"height":400,"color":"5"},
-		{"id":"fe84fe45cc956795","type":"file","file":"problems/knapsack problem.md","x":-1710,"y":517,"width":400,"height":400,"color":"5"},
+		{"id":"fe84fe45cc956795","type":"file","file":"problems/Knapsack problem.md","x":-1710,"y":517,"width":400,"height":400,"color":"5"},
 		{"id":"705829eb21cc7022","type":"text","text":"### making the grid\nWhat does the grid for this problem look like? You need to answer these questions:\n- What are the values of the cells?\n- How do you divide this problem into subproblems?\n- What are the axes of the grid?","x":499,"y":-21,"width":525,"height":316,"color":"4"},
 		{"id":"c40277723a4af516","type":"text","text":"#### Filling in the grid\n-  there’s no easy way to calculate the formula here. You have to experiment and try to find something that works","x":1122,"y":48,"width":443,"height":181,"color":"4"},
-		{"id":"268cfbfc4c2ca2fc","type":"text","text":"# popular problems","x":-1083,"y":22,"width":368,"height":65,"color":"5"}
+		{"id":"268cfbfc4c2ca2fc","type":"text","text":"# popular problems","x":-1083,"y":22,"width":368,"height":65,"color":"5"},
+		{
+			"id":"95e0b3a7e4458f86",
+			"styleAttributes":{},
+			"text":"## when?\n> what kind of problems DP is used to solve?\n- you want optimize/maximize something giving a constraint\n- the problem can be broken into discrete sub-problems\n- ",
+			"type":"text",
+			"x":-1086,
+			"y":-1068,
+			"width":489,
+			"height":365
+		},
+		{"id":"e8a29872560e8ef8","type":"text","text":"### properties of problems that can be solved by DP\n1. optimal substructure property: we can get optimal solution to the problem by combining the optimal solutions of the subproblems\n2. overlapping subproblems: SP A includes SP B and SP B includes SP C and so on \n> there are mathematical ways to prove whether these properties exist or not in a problem","x":-1080,"y":-1380,"width":619,"height":253},
+		{"id":"c327e2645d15d652","type":"text","text":"- we don't want to recalculate things\n- we want to rely on the existing solutions","x":534,"y":-1318,"width":857,"height":408},
+		{"id":"df2b332092468b1d","type":"file","file":"memoization.md","x":-1735,"y":-1346,"width":400,"height":400},
+		{"id":"0eae98d1f333b80f","type":"text","text":"## types of solutions\n1. optimal (exact) solution\n2. approximate solution","x":563,"y":-221,"width":411,"height":145},
+		{"id":"b731b0a5c6d04eea","type":"text","text":"## types of problems \n1. combinatoric problems: answer the question \"how many?\", we want to count something\n2. optimization problems: we want to find a strategy that maximizes or minimizes a some function","x":539,"y":-503,"width":425,"height":245},
+		{"id":"7c311a02c3585ecd","type":"file","file":"objective-function.md","x":1197,"y":-444,"width":400,"height":400},
+		{"id":"8c328830486979ec","type":"text","text":"## steps to solve a problem using DP\n1. define the [[objective-function]]\n2. identify the base cases\n3. write down the recurrence relation/(transition function) for the optimized objective function\n4. identify the order of execution/computation (the order in which subproblems are solved)\n5. identify the location of the answer","x":1668,"y":-811,"width":791,"height":380},
+		{"id":"481d32bf3a0630c6","x":1400,"y":-2001,"width":690,"height":266,"type":"text","text":"## how to reconstruct the path for DP problems \nhttps://youtu.be/3hHmUszRXjw?si=rgdCsl74HQkEiGwE&t=1316"}
 	]
 }

@@ -4,24 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "dfcd26ea13177636",
+        "id": "dfc5ddb7619fc215",
         "type": "tabs",
         "children": [
           {
-            "id": "1014295bc670799a",
+            "id": "746fb1d6d1ef1fc5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "problems/longest common substring.md",
-                "mode": "source",
-                "source": false
+                "file": "canvas/dynamic programming.canvas",
+                "viewState": {
+                  "x": 710.7527027449066,
+                  "y": -112.97955483875455,
+                  "zoom": -1.7999999999999994
+                }
               },
-              "icon": "lucide-file",
-              "title": "longest common substring"
+              "icon": "lucide-layout-dashboard",
+              "title": "dynamic programming"
+            }
+          },
+          {
+            "id": "97a8d5b672835db8",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 142.43859601963234,
+                  "y": -111.60000000000001,
+                  "zoom": -0.4
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,53 +190,54 @@
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "tldraw:Create new tldrawing": false
+      "tldraw:Create new tldrawing": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "1014295bc670799a",
+  "active": "97a8d5b672835db8",
   "lastOpenFiles": [
-    "problems/Longest common substring 1.md",
-    "problems/longest common substring.md",
-    "Tldraw 2025-04-02 1.53AM.md",
-    "Drawing 2025-04-02 01.52.31.excalidraw.md",
-    "Drawing 2025-04-02 01.52.14.excalidraw.md",
-    "problems/traveling-salesperson problem.md",
-    "problems/traveling-salesperson problem.md",
-    "problems/set-covering problem.md",
-    "problems/Knapsack problem.md",
-    "problems/knapsack problem.md",
-    "drawings/test.md",
-    "2025-04-02.md",
-    "canvas/greedy algorithms.canvas",
-    "attachments/00f32864-a8e3-4f43-abaf-753c20ed53d6-tldrawFile.png",
-    "attachments/211b8e79-8bc5-42b5-97cc-e0832b44d188-tldrawFile.png",
-    "attachments/35e137c0-b15d-4b3a-b992-f0c3fe001dad-tldrawFile.png",
-    "attachments/58fb9bba-284c-4471-ab3b-fb7f710622dc-tldrawFile.png",
-    "attachments/6ca49f56-7f16-48c4-9284-cb77c5d8f7f3-tldrawFile.png",
-    "attachments/cdc581e5-d6fe-4d7c-997a-166d9cf04c18-tldrawFile.png",
-    "problems/The classroom scheduling problem.md",
-    "attachments/36b7d30f-3aeb-42ed-8cbb-85cbe848ebf8-tldrawFile.png",
-    "attachments/872c93e4-1c99-44f4-802d-091cbb25685b-tldrawFile.png",
-    "attachments/1d8dc8c5-2b96-4f36-8c4a-bd4986ce3612-tldrawFile.png",
-    "attachments/Pasted Image 20250401235227_023.png",
-    "linked-list.md",
-    "levenshtein-distance.md",
-    "Inverted indexes data structure.md",
-    "The Diffie-Hellman algorithm.md",
-    "HyperLogLog algorithm.md",
-    "math/Pythagorean formula.md",
-    "SHAs.md",
-    "drawings/Tldraw 2025-04-01 8.48PM.md",
-    "drawings/Drawing 2025-04-01 20.48.05.excalidraw.md",
-    "drawings",
-    "Excalidraw/Drawing 2025-04-01 10.49.26.excalidraw.md",
-    "info.md",
-    "canvas/SHAs.md",
-    "tldraw",
-    "The Fourier transform.md",
-    "canvas/Linear programming.canvas",
+    "Untitled.canvas",
     "canvas/dynamic programming.canvas",
+    "postgres.md",
+    "memoization.md",
+    "objective-function.md",
+    "test.md",
+    "attachments/8c8471ad-2924-4e5e-b5c5-95a5ec369623-tldrawFile.png",
+    "attachments/db870263-10a4-4865-a815-a3885cb9cc6f-tldrawFile.png",
+    "Untitled.md",
+    "abstract-data-type.md",
+    "recurrence-relation.md",
+    "attachments/5a869f7d-257f-43c8-8318-d108a619eff5-tldrawFile.png",
+    "attachments/770d3cf7-3b32-4593-8ae7-b649f2b57469-tldrawFile.png",
     "canvas/k-nearest neighbors.canvas",
+    "The Fourier transform.md",
+    "Inverted indexes data structure.md",
+    "binary search tree data structure.md",
+    "problems/Knapsack problem.md",
+    "problems/traveling-salesperson problem.md",
+    "canvas/greedy algorithms.canvas",
+    "attachments/Pasted image 20250402153426.png",
+    "attachments/52ae7ad3-4560-4113-aef5-cf512e7e36f3-tldrawFile.png",
+    "attachments/9614d338-f52b-46ad-b0e3-537d7cd5a6cf-tldrawFile.png",
+    "attachments/Pasted image 20250402153421.png",
+    "linked-list.md",
+    "traversal.md",
+    "OCR.md",
+    "attachments/Pasted image 20250401163505.png",
+    "Parallel algorithms.md",
+    "patterns.md",
+    "pointers.md",
+    "problem-solving.md",
+    "problem-solving-interview.md",
+    "recursion.md",
+    "resources.md",
+    "something here.md",
+    "Tldraw 2025-04-02 1.53AM.md",
+    "SHAs.md",
+    "attachments/Pasted Image 20250331033300_478.png",
+    "drawings",
+    "tldraw",
+    "canvas/Linear programming.canvas",
     "canvas",
     "math",
     "levenshtein-distance.md~",

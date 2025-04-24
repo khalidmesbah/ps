@@ -1,0 +1,3 @@
+- a function that you want to minimize or maximize in your problem
+- the definition of the objective function is usually in the problem description
+- defining the objective function is 50% of the solution
