@@ -39,7 +39,7 @@
 		{
 			"id":"fb763bd3cacd3c03",
 			"styleAttributes":{},
-			"text":"## What\n- a technique to solve a hard problem by breaking it up into subproblems and solving those subproblems first.\n- a technique to solve a certain type of problems \n- not all problems can be solved using DP, only problems with certain properties can be solved in a certain way\n- an optimization technique, \n- it's a method to optimize the solution to a problem (optimize from exponential time to polynomial time)\n- algorithmic technique to solve combinatoric and optimization problems utilizing the fact that the optimal solution to the problem depends on the optimal solution of its overlapping subproblems \n",
+			"text":"## What\n- a technique to solve a hard problem by breaking it up into subproblems and solving those subproblems first.\n- a technique to solve a certain type of problems \n- not all problems can be solved using DP, only problems with certain properties can be solved in a certain way\n- an optimization technique, \n- it's a method to optimize the solution to a problem (optimize from exponential time to polynomial time)\n- algorithmic technique to solve combinatoric and optimization problems utilizing the fact that the optimal solution to the problem depends on the optimal solution of its overlapping subproblems \n- correctness of recursion and efficiency of greedy algo\n- the name is misleading\n- \n",
 			"type":"text",
 			"x":-389,
 			"y":-1361,
@@ -85,6 +85,9 @@
 		{"id":"b731b0a5c6d04eea","type":"text","text":"## types of problems \n1. combinatoric problems: answer the question \"how many?\", we want to count something\n2. optimization problems: we want to find a strategy that maximizes or minimizes a some function","x":539,"y":-503,"width":425,"height":245},
 		{"id":"7c311a02c3585ecd","type":"file","file":"objective-function.md","x":1197,"y":-444,"width":400,"height":400},
 		{"id":"8c328830486979ec","type":"text","text":"## steps to solve a problem using DP\n1. define the [[objective-function]]\n2. identify the base cases\n3. write down the recurrence relation/(transition function) for the optimized objective function\n4. identify the order of execution/computation (the order in which subproblems are solved)\n5. identify the location of the answer","x":1668,"y":-811,"width":791,"height":380},
-		{"id":"481d32bf3a0630c6","x":1400,"y":-2001,"width":690,"height":266,"type":"text","text":"## how to reconstruct the path for DP problems \nhttps://youtu.be/3hHmUszRXjw?si=rgdCsl74HQkEiGwE&t=1316"}
+		{"id":"481d32bf3a0630c6","type":"text","text":"## how to reconstruct the path for DP problems \nhttps://youtu.be/3hHmUszRXjw?si=rgdCsl74HQkEiGwE&t=1316","x":1400,"y":-2001,"width":690,"height":266},
+		{"id":"a3cd0e6699d7542f","type":"text","text":"## approaches\n- (TD) top-down DP => ([[memoization]] + [[recursion]])\n\t- use recursion\n\t- we solve the needed subproblems only\n- (BU) bottom-up DP =>\n\t- real DP\n\t- solves all subproblems\n\t- called tabulation\n\t- we always use iteration\n\t - no stack overflow\n- ","x":1949,"y":-183,"width":627,"height":399},
+		{"id":"3d46744610302512","type":"text","text":"## calculation subproblems\n1. forward DP: we know several results to subproblems and by using them we can calculate the result of the other subproblems\n2. backward DP: we know the result of one subproblem and by using it we can calculate the result of other subproblems","x":1805,"y":353,"width":548,"height":328},
+		{"id":"239f266824a44bb3","type":"file","file":"Untitled.canvas","x":2468,"y":354,"width":400,"height":400}
 	]
 }
